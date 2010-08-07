@@ -1,0 +1,24 @@
+<h1>Listing posts</h1>
+
+<table>
+  <tr>
+    <th>Postcreator</th>
+    <th>Posttopic</th>
+    <th>Posttime</th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%=h post.postCreator %></td>
+    <td><%=h post.postTopic %></td>
+    <td><%=h post.postTime %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New post', new_post_path %>

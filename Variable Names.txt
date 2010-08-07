@@ -1,0 +1,19 @@
+MICROCOSM variables
+
+userName		-	string
+userId			-	string
+userType		-	string
+userPassword	-	string
+userEmail		-	string
+
+
+
+topicName		-	string
+topicType		-	string
+
+
+postCreator		-	string
+postTopic		-	string
+postTime		-	datetime
+
+
