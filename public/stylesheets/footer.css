@@ -1,0 +1,25 @@
+/*	Description: 	MICROCOSM footer css page, optomized for CHROME v.6.0
+	Author: 		Michael mcGuire
+					mmcgu1966@gmail dot com
+	Updated:		08/10/2010
+*/    
+/*		COLOR PALETTE
+		
+	dark red		#8b0000;
+
+*/
+	
+#footer
+	{	color: #8b0000;
+		width: 300px;
+		position:absolute;
+        	bottom: 0px;
+			left: 25px;  
+	}	
+ 
+#footer span
+	{	color: #8b0000;
+		font-family: "Bradley Hand ITC", cursive; 
+		font-weight: bold;
+		font-size: 110%;
+	}

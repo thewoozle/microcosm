@@ -1,0 +1,247 @@
+/*	Description: 	MICROCOSM main css page, optomized for CHROME v.6.0
+	Author: 		Michael mcGuire
+					mmcgu1966@gmail dot com
+	Updated:		08/10/2010
+*/    
+/*			BASIC COLOR SCHEME:	bright brushed metal and smoked glass on wood and corkboard background
+								with black page background
+				dark red		#8b0000;
+				electrum		#b88c5b;		184,140,91
+				
+				silver			#C0C0C0;		192,192,192
+				black			#000000;		0,0,0;
+				
+				rubber			#2d2e2e;		45, 46, 46
+				
+*/
+			
+/*			TYPOGRAPHY	*/
+@font-face
+	{ 	font-family: "EurostileExtended-Roman-DTC";  
+		src: url('../fonts/EurostileExtended-Roman-DTC.ttf');
+	}	
+@font-face 
+	{ 	font-family: "HelveticaNeueLT Pro 25 Ultra Light"; 
+		src: url('../fonts/HelveticaNeueLTPro-UltLt.otf'); 
+	} 	
+*	{	font-family: Calibri, sans-serif;}	  	 		
+h1
+	{	font-family: "EurostileExtended-Roman-DTC", arial, serif;
+		color: #c0c0c0;
+		text-shadow: #7d582e 1px 1px 1px; 
+	}	
+
+a
+	{	font-family: "Comic Sans MS", sans-serif;	
+		font-size:75%;
+		color: #C38EC7;		
+		text-shadow: #000000 1px 1px 1px;
+	}	
+	li:hover a 
+		{	color: #87CEFA;	
+		}   
+	#buttons li a
+		{	line-height: 25px;
+		}
+	
+	
+	
+	
+/*
+			LAYOUT
+*/			
+body			
+	{	background-color: #2d2e2e;	
+		height: 100%;
+    }	
+hr
+	{	color: #b88c5b;					/*  ie		*/
+		background-color: #b88c5b;		/*	moz		*/
+		border-color: #b88c5b;			/*	webkit	*/
+	}	
+
+#wrapper		
+	{	width: 800px;
+		min-height: 650px;
+		margin-left: 70px;
+		margin-top: 40px;
+		border: solid 15px #c0c0c0;
+		/*border: solid 2px rgba(180,180,180, 0.7);*/
+			border-radius: 7px; 
+			-moz-border-radius: 7px; 
+			-webkit-border-radius: 7px;
+		background: url('../images/water_arch.jpg') no-repeat;
+			box-shadow: 0px 0px 10px rgba(135,206,250, 0.8); 
+			-webkit-box-shadow: 0px 0px 12px rgba(135,206,250, 0.8); 
+			-moz-box-shadow: 0px 0px 10px rgba(135,206,250, 0.8);			
+	}	
+	
+	#top_section
+		{	height: 50px;
+			background: rgb(9, 0, 18);		/* fallback background for depricated browsers */
+			background: rgba(9, 0, 18, 0.7);
+ 		    border: solid 1px #2d2e2e;
+				border-top-right-radius: 7px;
+				border-top-left-radius: 7px;
+ 		    	-webkit-border-top-right-radius:7px;
+				-webkit-border-top-left-radius: 7px;
+				-moz-border-radius-topright: 7px;
+				-moz-border-radius-topleft: 7px;	
+			border-bottom: groove 4px  #C0C0C0;	
+ 		    margin-top: -1px;	
+			margin-left: -1px;		
+			margin-right: -1px;	
+		}  	
+		#title_div
+			{	width: 142px;
+				height: 21px;
+				margin-top: 6px;
+				margin-left: 10px;
+			}				
+		#title
+			{	position: absolute;		
+				margin-left: 5px;		
+				margin-top: -6px;	
+			}	 
+		#contact_links
+			{	margin-right: 15px;
+				margin-top: 2px;
+				background-color: #2d2e2e;
+				border-radius: 3px;
+					-moz-border-radius: 3px;
+					-webkit-border-radius: 3px;
+				float: right;
+			}	
+		
+		li:active a
+			{	position: relative;
+					top: 1px;	
+			}	
+		#navbar
+			{	margin-top: 4px;
+				height: 18px;
+				background-color: rgba(0,0,0,0.5);
+			} 		
+			#navbar li	
+				{	float: left;					
+				}
+				#navbar li a
+					{	padding: 5px;
+					}	
+				#navbar li a img
+					{	margin-top: -8px;
+					}
+				#navbar a.here 
+					{	color: #b88c5b;
+					}		
+			
+	#button_panel			
+		{	position: absolute;
+			top: 105px;
+			width: 98px;
+			z-index: 100;
+		}				
+		#button_panel:hover  #buttons
+			{	background: rgb(135,206,250);		
+				background: rgba(135,206,250, 0.4);
+				box-shadow: 4px 3px 5px rgba(135,206,250, 0.5); 
+					-webkit-box-shadow: 4px 3px 5px rgba(135,206,250, 0.5); 
+					-moz-box-shadow: 4px 3px 5px rgba(135,206,250, 0.5); 
+			} 
+			#buttons li			
+				{	padding-left: 15px;
+					margin-top: 3px;
+					margin-left: -30px;
+					height: 25px;
+					width: 110px;
+					background-image:url(../images/button_shine.png);
+					background-repeat: no-repeat;
+					background-color: black;
+					background-color: rgba(0,0,0,0.8);
+					border: solid 2px #000000;
+						border-bottom-left-radius: 11px;
+						border-top-left-radius: 11px;
+						-webkit-border-bottom-left-radius: 11px;
+						-webkit-border-top-left-radius: 11px;
+						-moz-border-radius-bottomleft: 11px;
+						-moz-border-radius-topleft: 11px;	
+					box-shadow: 4px 4px 5px rgba(135,206,250, 0.5); 
+						-webkit-box-shadow: 3px 3px 3px rgba(45, 46, 46, 0.5); 
+						-moz-box-shadow: 4px 4px 5px rgba(135,206,250, 0.5); 	
+				}				
+				
+	#content			
+		{	border: groove 4px  #C0C0C0;
+			border-top: solid 1px #2d2e2e;
+				border-bottom-right-radius: 7px;
+				border-bottom-left-radius: 7px;
+ 		       	-webkit-border-bottom-right-radius:7px;
+				-webkit-border-bottom-left-radius: 7px;
+				-moz-border-radius-bottomright: 7px;
+				-moz-border-radius-bottomleft: 7px;				
+      		padding-left: 100px;
+			padding-right: 15px;
+			padding-bottom: 15px;
+			margin-top: 20px;			
+			margin-left: -1px;
+			margin-right: -1px;
+			height: 425px;
+			background: rgb(9, 0, 18);		/* fallback background for depricated browsers */
+			background: rgba(9, 0, 18, 0.7);
+			overflow: hidden;
+		}				
+		.screen
+			{	padding: 15px 15px 0 15px;
+				margin-bottom: 400px;
+				height: 100%;
+			}				
+		#content img
+			{	border: groove 4px  #C0C0C0;
+					border-radius: 7px;
+					-moz-border-radius: 7px;
+					-webkit-border-radius: 7px;
+			}				
+		h2	
+			{	padding-top: .4em;
+			} 	
+		h3
+			{	margin-top: 25px;
+			}		
+		blockquote		
+			{	padding: 15px .5em;
+			}  
+		#who_image		
+			{	float: right;
+				margin: 5px 10px 0 15px;		
+				width: 246px;
+			}				
+		#boys-image		
+			{	float: right;	
+				margin-left: 15px;
+				width: 302px;
+			}
+		#totd
+			{	margin-bottom: 25px;
+			}
+		#link_nav  a
+			{	color: #C38EC7;
+			}
+			#link_nav ul li:hover a 
+				{	color: #87CEFA;	
+				}   
+			
+			
+			
+		
+		
+
+	
+	
+	
+	
+	
+
+				
+
+
+

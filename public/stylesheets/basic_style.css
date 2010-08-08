@@ -1,0 +1,17 @@
+/*	Description: 	MICROCOSM basic css page, optomized for CHROME v.6.0
+	Author: 		Michael mcGuire
+					mmcgu1966@gmail dot com
+	Updated:		08/10/2010
+*/    
+/* 		these are basic defaults that start any page  
+		last updated on 03/23/2010
+*/	
+
+*		{ 	margin: 0; padding: 0; color: white;}	
+img		{ 	vertical-align: middle; }	
+a		{	outline: none; text-decoration: none; }	
+li		{	list-style-type: none; }
+p		{	text-align: justify; 		}
+body	{	width: 1024px; margin: 0px auto; }
+	
+.clearer{clear: both; }
