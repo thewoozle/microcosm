@@ -12,6 +12,6 @@ img		{ 	vertical-align: middle; }
 a		{	outline: none; text-decoration: none; }	
 li		{	list-style-type: none; }
 p		{	text-align: justify; 		}
-body	{	width: 1024px; margin: 0px auto; }
+body	{	width: 1024px; margin: 0px auto; background-color: #2d2e2e;}
 	
 .clearer{clear: both; }
