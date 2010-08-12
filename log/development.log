@@ -2396,3 +2396,38 @@ Rendering template within layouts/main
 Rendering main/index
 Rendered main/_control_panel (0.0ms)
 Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-12 06:02:27) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_control_panel (2.0ms)
+Completed in 94ms (View: 92, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-12 06:57:42) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_control_panel (0.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-12 07:03:05) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_control_panel (0.0ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-12 07:10:48) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_control_panel (0.0ms)
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-12 07:12:58) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_control_panel (0.0ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/]
