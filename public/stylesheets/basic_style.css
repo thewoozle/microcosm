@@ -5,6 +5,7 @@
 */    
 /* 		these are basic defaults that start any page  
 		last updated on 03/23/2010
+		carrot orange: 	#ED9121;
 */	
 
 *		{ 	margin: 0; padding: 0; color: white;}	
@@ -14,4 +15,5 @@ li		{	list-style-type: none; }
 p		{	text-align: justify; 		}
 body	{	width: 1024px; margin: 0px auto; background-color: #2d2e2e;}
 	
+.error	{color: #ED9121; text-shadow: #000000 1px 1px 2px;}
 .clearer{clear: both; }

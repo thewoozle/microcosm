@@ -1,27 +1,33 @@
 	<!--	main body of MICROCOSM page. Called by main.html.erb (layout)	-->
 	
 	<div id="wrapper">
-	<div id="content2">
-	<div id="content">
-	
 		<div id="header">
-			<h1>MICROCOSM</h1>
 			<div id="control_panel">
-				<%= render :partial=>"control_panel" %>
+				<h1>MICROCOSM</h1>
+				<DIV ID="log_in">
+					<%= render :partial =>"users/login" %>
+				</div>
+				<div id="topic_list">
+					<%= render :partial=>"topics/topics" %>
+				</div>	
 			</div>	<!--	end control_panel -->	
+		</div>		<!--	end header -->
+		
+		<div id="content">
 	
-		</div>		<!--	end header -->	
 		
-		<div id="topic1">
 		
-		</div>	
+			<div id="topic1">
 		
-		<div id="topic2">
+			</div>	
 		
-		</div>
+			<div id="topic2">
+		
+			
 	
-	</div>
-	</div>	<!-- end content	-->
+			</div>
+		</div>	<!-- end content	-->
+		
 		<div id="footer" >
 			&copy; <span>Michael McGuire 2010</span>
 		</div>

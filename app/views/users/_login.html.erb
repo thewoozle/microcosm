@@ -1,0 +1,15 @@
+				
+				<!-- creates form, executes the authenticate method on SUBMIT -->
+				<%= form_tag :action=>'process_login' %>
+				<%= label(:post, :title, "User name", :class => "label text_shadow") %><br/>
+				<%= text_field ("userform", :userName, :size=>20) %><br/>
+				<%= label(:post, :title, "Password", :class => "label text_shadow") %><br/>
+				<%= password_field ("userform", :userPassword, :size=>20) %><br/>
+				<input type="submit" value="log in" />
+				<%= link_to 'New user', new_user_path, :class=>"link text_shadow" %>
+				
+				<% if flash[:notice] %>
+					<div class="error">
+						<%= flash[:notice] %>
+					</div
+				<% end %>	

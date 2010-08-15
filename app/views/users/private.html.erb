@@ -1,0 +1,5 @@
+<!-- displays 'hello [username]' -->
+hello <%=session[:user_id]%>.
+
+<!-- creates logout link -->
+<%= link_to "logout", :controller => "user", :action => "logout" %>

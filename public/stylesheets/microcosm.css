@@ -7,7 +7,7 @@
 								with black page background
 				dark red		#8b0000;
 				electrum		#b88c5b;		184,140,91
-				
+				lt. sky blue	#87CEFA;		135, 206, 250
 				silver			#C0C0C0;		192,192,192
 				black			#000000;		0,0,0;
 				
@@ -28,23 +28,28 @@
 h1
 	{	font-family: "EurostileExtended-Roman-DTC", arial, serif;
 		color: #c0c0c0;
-		text-shadow: #7d582e 1px 1px 1px; 
+		text-shadow: #7d582e 1px 1px 3px; 
 	}	
+	
+.text_shadow
+	{	text-shadow: #000000 1px 1px 2px;
+	}
 
 a
 	{	font-family: "Comic Sans MS", sans-serif;	
 		font-size:75%;
-		color: #C38EC7;		
-		text-shadow: #000000 1px 1px 1px;
+		color: #87CEFA;				
 	}	
-	li:hover a 
-		{	color: #87CEFA;	
+	a:hover 
+		{	color: #ffffff;	
 		}   
 	#buttons li a
 		{	line-height: 25px;
 		}
-	
-	
+.label
+	{	font-size: 60%;
+	}
+
 	
 	
 /*
@@ -56,9 +61,9 @@ body
 		padding-left: 20px;
     }	
 #wrapper		
-	{	width: 900px;
-		min-height: 650px;
-		margin-top: 40px;
+	{	width: 940px;
+		min-height: 760px;
+		margin-top: 10px;
 		border: solid;
 			border-color: #b5b2ad;
 			border-width: 6px;
@@ -67,36 +72,53 @@ body
 		background-color: #c0c0c0;
 		box-shadow: 3px 3px 15px #000; 
 			-webkit-box-shadow: 3px 3px 15px #000; 
-			-moz-box-shadow: 3px 3px 15px #000; 		
-		
+			-moz-box-shadow: 3px 3px 15px #000; 			
 	}
-#content
-	{	
+		
+	#control_panel
+		{	background-image: url('../images/control_panel.png');
+			background-repeat: no-repeat;
+			position: fixed;
+				top: 50px;
+				left: 40px;
+				z-index: 9;
+			height: 610px;
+			width: 920px;		
+		}
+		h1	
+			{	margin-top: 15px;
+				text-align: center;		
+			}
+		#log_in
+			{	position: relative;
+					left: 660px;
+					top: -40px;
+			}
 			
-		background-image: url('../images/bulletin_board.png');
-		
-		
-		
+		#topic_list
+			{	position: relative;
+					top: 160px;
+					right: 50px;
+				float: right;
+				border: solid red;
+				
+			}
+	
+	#content
+		{	border: solid black;
+				border-width: 2px;
+				-moz-border-radius: 10px; 
+				border-radius: 10px; 	
+			position: fixed;
+				top: 140px;
+				left: 60px;	
+			width: 740px;	
+			height: 630px;
+			background-image: url('../images/bulletin_board.png');
 			
-	}	
-	
-	#content2
-	{	border: solid black;
-			border-width: 7px;
-			-moz-border-radius: 10px; 
-			border-radius: 10px; 	
-margin-left: 20px;
-		margin-top: 20px;			
-	
-	}
-	
-	
-#control_panel
-	{	background-image: url('../images/control_panel.png');
-		background-repeat: no-repeat;
+			
+				
+		}	
 		
-		height: 500px;
-		width: 100%;
 	
-	}
 	
