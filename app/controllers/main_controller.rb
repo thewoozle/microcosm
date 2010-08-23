@@ -1,39 +1,38 @@
 class MainController < ApplicationController
-	def process_login
-		#user.new(params[:userform[) will create a new object of User, retrieve values from the form 
-		#and store it variable @user.
-		@user = User.new(params[:userform])
-		valid_user = User.find(:first, :conditions => ["userName = ? and userPassword = ?", @user.userName, @user.userPassword])
-		
-		if valid_user
-			session[:user_id]=valid_user.userName
-			redirect_to :action => 'show_topics'
+	
+	def process_login 
+		@validUser = User.find(:first, :conditions =>["userName = ? AND userPassword = ?",
+													params[:loginName], params[:loginPassword]])
+		if @validUser
+			#creates a session with username
+			session[:user_id]=@validUser.userName
+			flash[:notice] = "VALID User/Password"
+			redirect_to :action=> 'index'
 		else
 			flash[:notice] = "Invalid User/Password"
-			#redirect_to :action=>'login'
-		end	
+			redirect_to :action=> 'index'
+		end
+		
 	end
+	
   
+	
+	
 	def logout
 		if session[:user_id]
 			reset_session
-			#redirect_to :action=>'login'
+			
 		end	
 	end
   
 	def login
 	end
 
-	def private
-	end
+	
 
 	
 	def index
 	end
 	
-	def private
-		if !session[:user_id]
-			#redirect_to :action=> 'login'	
-		end
-	end
+	
 end

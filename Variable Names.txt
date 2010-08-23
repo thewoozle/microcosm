@@ -17,3 +17,6 @@ postTopic		-	string
 postTime		-	datetime
 
 
+loginName		-	userName to validate for log-in
+loginPassword	-	userPassword to validate for log-in
+

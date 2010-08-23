@@ -46,8 +46,10 @@ a
 	#buttons li a
 		{	line-height: 25px;
 		}
-.label
-	{	font-size: 60%;
+.login_label
+	{	font-size: 75%;
+		margin-left: -10px;
+		color: #ffffff
 	}
 
 	
@@ -93,6 +95,7 @@ body
 			{	position: relative;
 					left: 660px;
 					top: -40px;
+					
 			}
 			
 		#topic_list
