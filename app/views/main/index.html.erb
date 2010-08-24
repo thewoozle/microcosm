@@ -5,7 +5,12 @@
 			<div id="control_panel">
 				<h1>MICROCOSM</h1>
 				<DIV ID="log_in">
-					<%= render :partial =>"users/login" %>
+					<% if @validUser %>
+						<%= render :partial =>"logged-in" %>
+						</p>
+					<% else %>	
+						<%= render :partial =>"login" %>
+					<% end %>	
 				</div>
 				<div id="topic_list">
 					<%= render :partial=>"topics/topics" %>
