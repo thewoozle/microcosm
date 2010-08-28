@@ -1,37 +1,55 @@
 class MainController < ApplicationController
 	
-	def process_login 
-		@validUser = User.find(:first, :conditions =>["userName = ? AND userPassword = ?",
-													params[:loginName], params[:loginPassword]])
-		if @validUser
+	def index
+		@title ="MICROCOSM"
+	end	
+	
+	
+	def login 
+		#	gets the userName and userPassword from the login Partial and validates them
+		#	then changes the main view from using the login Partial to the loggedin Partial
+		
+		@user = User.new(params[:user])
+		
+		#validates the user against the database of users
+		validUser = User.find_by_userName_and_userPassword(@user.userName, @user.userPassword)
+		
+		if validUser 
 			#creates a session with username
-			session[:user_id]=@validUser.userName
-			flash[:notice] = "VALID User/Password"
+			session[:id]=validUser.id 
+			$userName = validUser.firstName + " " + validUser.lastName
+			console validUser.id.to_s
+			
+			
 			redirect_to :action=> 'index'
 		else
-			flash[:notice] = "Invalid User/Password"
+			flash[:notice] = "INVALID User/Password"
+			reset_session
+			@validUser = nil
 			redirect_to :action=> 'index'
 		end
-		
+			
 	end
 	
   
 	
 	
 	def logout
-		if session[:user_id]
+		
 			reset_session
+			console ("logged out")
 			
-		end	
+			@validUser = nil
+			redirect_to :action=> 'index'
+		
 	end
   
-	def login
-	end
-
-	
-
-	
-	def index
+  
+		# the Console function accepts a string and prints it on the console output
+		#	this is mainly for troubleshooting and testing
+	def console (consoleMessage)
+		puts "_____________________"
+		puts "  -- " + consoleMessage + "\n "		
 	end
 	
 	

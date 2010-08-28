@@ -2,7 +2,8 @@
 
 <table>
   <tr>
-    <th>Username</th>
+    <th>ID</th>
+	<th>userName</th>
     <th>Firstname</th>
     <th>Lastname</th>
     <th>Userid</th>
@@ -13,7 +14,8 @@
 
 <% @users.each do |user| %>
   <tr>
-    <td><%=h user.userName %></td>
+    <td><%=h user.id %></td>
+	<td><%=h user.userName %> </td>
     <td><%=h user.firstName %></td>
     <td><%=h user.lastName %></td>
     <td><%=h user.userId %></td>

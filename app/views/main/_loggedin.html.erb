@@ -1,0 +1,13 @@
+				
+				<% form_tag  "/main/logout" do %>
+					<br/>
+					<p class="login_label text_shadow">Welcome <%= $userName %>
+					</p><br/>
+					<%=submit_tag "Log Out" %>	
+					
+					<% if flash[:notice] %>
+						<div class="error">
+							<%= flash[:notice] %>
+						</div>
+					<% end %>	
+				<% end %>
