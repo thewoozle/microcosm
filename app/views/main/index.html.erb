@@ -1,9 +1,9 @@
 	<!--	main body of MICROCOSM page. Called by main.html.erb (layout)	-->
 	
-	<div id="wrapper">
+	<div id="wrapper" class="silver_border faded_background">
 		<div id="header">
 			<div id="control_panel">
-				<h1><%=@title%></h1>
+				<h1 class="headline_font"><%=@title%></h1>
 				<DIV ID="log_in">
 					<% if !session[:id] %>
 						<%= render :partial =>"login" %>
@@ -12,29 +12,32 @@
 						<%= render :partial =>"loggedin" %>
 					<% end %>	
 				</div>
-				<div id="topic_list">
-					<%= render :partial=>"topics/topics" %>
+				<div id="topic_list_container"
+					<h2 id="topic_title" class="headline_font">Topics</h2> 
+					<div id="topic_list" class="silver_border">					
+						<% if session[:id] %>
+							<%= render :partial=>"topics/topics" %>
+						<% end %>	
+					</div>	
 				</div>	
 			</div>	<!--	end control_panel -->	
 		</div>		<!--	end header -->
 		
 		<div id="content">
-	
+			<div id="topic_container">
 		
+				<div id="topic_1" class="topic silver_border faded_background">
 		
-			<div id="topic1">
+				</div>	
 		
-			</div>	
-		
-			<div id="topic2">
-		
-			
-	
-			</div>
-		</div>	<!-- end content	-->
-		
-		<div id="footer" >
-			&copy; <span>Michael McGuire 2010</span>
-		</div>
+				<div id="topic_2" class="topic silver_border faded_background">
+						
+				</div>
+			</div>	<!-- end of topic_container -->	
+		</div>	<!-- end content	-->	
 		
 	</div>	<!--	end wrapper -->	
+	
+	<div id="footer" >
+			&copy; <span>Michael McGuire 2010</span>
+	</div>
