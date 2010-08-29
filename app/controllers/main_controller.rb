@@ -2,6 +2,13 @@ class MainController < ApplicationController
 	
 	def index
 		@title ="MICROCOSM"
+		
+		@topics = Topic.all
+
+		respond_to do |format|
+		  format.html # index.html.erb
+		  format.xml  { render :xml => @topics }
+		end
 	end	
 	
 	
@@ -23,9 +30,9 @@ class MainController < ApplicationController
 			
 			redirect_to :action=> 'index'
 		else
-			flash[:notice] = "INVALID User/Password"
 			reset_session
 			@validUser = nil
+			flash[:notice] = "INVALID User/Password"
 			redirect_to :action=> 'index'
 		end
 			

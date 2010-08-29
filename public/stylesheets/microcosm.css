@@ -9,6 +9,7 @@
 				electrum		#b88c5b;		184,140,91
 				lt. sky blue	#87CEFA;		135, 206, 250
 				silver			#C0C0C0;		192,192,192
+				darker silver	#b5b2ad			181,178,173
 				black			#000000;		0,0,0;
 				
 				rubber			#2d2e2e;		45, 46, 46
@@ -51,6 +52,7 @@ a
 		margin-left: -10px;
 		color: #ffffff
 	}
+	
 
 	
 	
@@ -62,19 +64,25 @@ body
 		height: 100%;
 		padding-left: 20px;
     }	
+	
+
 #wrapper		
 	{	width: 940px;
 		min-height: 760px;
-		margin-top: 10px;
-		border: solid;
-			border-color: #b5b2ad;
-			border-width: 6px;
-			-moz-border-radius: 3px; 
-			border-radius: 15px; 			
-		background-color: #c0c0c0;
+		position: fixed;
+			top: 10px;
+			left: 30px;		
 		box-shadow: 3px 3px 15px #000; 
 			-webkit-box-shadow: 3px 3px 15px #000; 
 			-moz-box-shadow: 3px 3px 15px #000; 			
+		border: solid;
+		border-color: #b5b2ad;
+		border-color: rgba(181,178,173,0.7);
+		border-width: 6px;
+		-moz-border-radius: 10px; 
+		border-radius: 10px; 			
+		background-color: #c0c0c0;
+		background-color: rgba(192,192,192,0.8);
 	}
 		
 	#control_panel
@@ -103,9 +111,22 @@ body
 					top: 160px;
 					right: 50px;
 				float: right;
-				border: solid red;
-				
+				padding: 5px;
+				border: solid;
+				border-color: #b5b2ad;
+				border-color: rgba(181,178,173,0.7);
+				border-width: 3px;
+				-moz-border-radius: 8px; 
+				border-radius: 8px; 			
+				background-color: #dddddd;
 			}
+			#topic_list a
+				{	color: #000;
+				}
+			#topic_list a:hover
+				{	color: #fff;
+					text-shadow: #000 1px 1px 2px;
+				}
 	
 	#content
 		{	border: solid black;
@@ -117,11 +138,23 @@ body
 				left: 60px;	
 			width: 740px;	
 			height: 630px;
-			background-image: url('../images/bulletin_board.jpg');
-			
-			
-				
+			background-image: url('../images/bulletin_board.jpg');				
 		}	
-		
+	.login_form
+		{	width: 220px;
+			text-align: right;
+		}
+		.textfield 
+			{	width: 150px;
+				margin-bottom: 5px;
+			}
+		.login_submit
+			{	margin-left: 65px;
+				float:left;
+			}
+		.login_error
+			{	position: relative;
+					left: -50px;
+			}		
 	
 	

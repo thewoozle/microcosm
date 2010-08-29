@@ -1,1 +1,8 @@
-<h2>topics</h2>
+
+
+<% @topics.each do |topic| %>
+  
+  
+    <p><%= link_to topic.topicName, topic %></p>
+    
+<% end %>

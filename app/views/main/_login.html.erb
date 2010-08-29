@@ -1,16 +1,17 @@
 <!--  Partial that shows the log-in form -->
-<% form_for :user, :url=>{ :action =>"login", :controller =>"main"}  do |f| %>
-	<%= f.error_messages %>
-	<%= f.label :userName, 'User Name ', :class => "login_label text_shadow" %><br/>
-	<%= f.text_field(:userName) %><br/>
-	<%= f.label :userPassword, 'Password: ', :class => "login_label text_shadow" %><br/>
-	<%= f.password_field(:userPassword ) %><br/>
-	
-	<%= f.submit "Log In" %>
-	<%= link_to "New user", new_user_path, :class=>"link text_shadow" %>
-					
+<% form_for :user,  :url=>{ :action =>"login", :controller =>"main"}  do |f| %>
+	<div class="login_form">
+		<%= f.error_messages %>
+		<%= f.label :userName, 'User Name ', :class => "login_label text_shadow" %>
+		<%= f.text_field :userName, :class=>"textfield" %><br/>
+		<%= f.label :userPassword, 'Password: ', :class => "login_label text_shadow" %>
+		<%= f.password_field :userPassword, :class=>"textfield"  %><br/>
+		
+		<%= f.submit "Log In", :class=>"login_submit" %>
+		<%= link_to "New user", new_user_path, :class=>"link text_shadow" %>
+	</div>				
 	<% if flash[:notice] %>
-		<div class="error">
+		<div class="login_error error">
 			<%= flash[:notice] %>
 		</div>
 	<% end %>	

@@ -29460,3 +29460,1739 @@ Rendering main/index
 Rendered main/_login (3.0ms)
 Rendered topics/_topics (0.0ms)
 Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-27 23:18:06) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (4.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/main]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-27 23:18:09) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"7Udmbxn6ssG+AfK1KXon+TfHrtvB8LBgaR62q6px3Gk=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 14ms (DB: 1) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-27 23:18:10) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (1.0ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-27 23:18:11) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"uqM6DWbx1W43qcU180bSrH34b+cbtpc+vLIB+bRksJ4=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 18ms (DB: 1) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-27 23:18:11) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (4.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-27 23:18:24) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"TXHhXArE/Y1T4gG9suT91xnEuTilbmM/2K3fKAxUlVE=", "user"=>{"userName"=>"bob", "userPassword"=>""}}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = 'bob' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 65ms (DB: 1) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-27 23:18:24) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:15:01) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (4.0ms)
+Rendered topics/_topics (1.0ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:15:06) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 07:15:09) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"TY49IVFuO8bMA6HgaQ3ZNEcPxcbyl528WvO06oBaBV8=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:15:09) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 07:15:20) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"kiDs7ozn+sJS9gh9EGxV1GXGGddaJPUqYUAUM0kJZTg=", "user"=>{"userName"=>"michael", "userPassword"=>"password"}}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = 'michael' AND "users"."userPassword" = 'password') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 23ms (DB: 1) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:15:20) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#logout (for 127.0.0.1 at 2010-08-28 07:15:25) [POST]
+  Parameters: {"commit"=>"Log Out", "authenticity_token"=>"kiDs7ozn+sJS9gh9EGxV1GXGGddaJPUqYUAUM0kJZTg="}
+Redirected to http://localhost:3000/
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/main/logout]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:15:25) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (1.0ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 07:15:29) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"uX1jmYMv3MoxgvhmpGd9lAsGIrc5vnKUQzw7mXA4ICU=", "user"=>{"userName"=>"bob", "userPassword"=>""}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userName" = 'bob' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:15:29) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:26:34) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:26:51) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:27:01) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:28:33) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (1.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:33:08) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (4.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 07:33:10) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"G5izy6ht8kczjWrWXmIQHdbuY+PeWpqPFHwa0tfoUpw=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:33:11) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:33:19) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (7.0ms)
+Rendered topics/_topics (1.0ms)
+Completed in 24ms (View: 20, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 07:33:27) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"HaGN3l1ZXN45GVZod+gOZK7tDX0HjXuQsQe7ITUCqXU=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:33:27) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:43:09) [GET]
+Rendering template within layouts/main
+Rendering main/index
+ERROR: compiling _run_erb_app47views47main47_login46html46erb_locals_login_object RAISED compile error
+C:/programming_projects/microcosm/app/views/main/_login.html.erb:5: syntax error, unexpected tASSOC
+....text_field :userName, class=>"textfield" ).to_s); @output_b...
+                              ^
+C:/programming_projects/microcosm/app/views/main/_login.html.erb:7: syntax error, unexpected tASSOC
+...d_field :userPassword, class=>"textfield"  ).to_s); @output_...
+                              ^
+Function body:           def _run_erb_app47views47main47_login46html46erb_locals_login_object(local_assigns)
+            old_output_buffer = output_buffer;login = local_assigns[:login];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!--  Partial that shows the log-in form -->\n"
+;  form_for :user, :url=>{ :action =>"login", :controller =>"main"}  do |f| ; @output_buffer.concat "\n\t"
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( f.label :userName, 'User Name ', :class => "login_label text_shadow" ).to_s); @output_buffer.concat "<br/>\n\t"
+; @output_buffer.concat(( f.text_field :userName, class=>"textfield" ).to_s); @output_buffer.concat "<br/>\n\t"
+; @output_buffer.concat(( f.label :userPassword, 'Password: ', :class => "login_label text_shadow" ).to_s); @output_buffer.concat "<br/>\n\t"
+; @output_buffer.concat(( f.password_field :userPassword, class=>"textfield"  ).to_s); @output_buffer.concat "<br/>\n\t\n\t"
+
+; @output_buffer.concat(( f.submit "Log In" ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( link_to "New user", new_user_path, :class=>"link text_shadow" ).to_s); @output_buffer.concat "\n\t\t\t\t\t\n\t"
+
+;  if flash[:notice] ; @output_buffer.concat "\n\t\t<div class=\"error\">\n\t\t\t"
+
+; @output_buffer.concat(( flash[:notice] ).to_s); @output_buffer.concat "\n\t\t</div>\n\t"
+
+;  end ; @output_buffer.concat "\t\n"
+;  end ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/programming_projects/microcosm/app/views/main/_login.html.erb:20:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:20:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:19:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:44:in `render_partial'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/partials.rb:184:in `render_partial'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:267:in `render'
+C:/programming_projects/microcosm/app/views/main/index.html.erb:9:in `_run_erb_app47views47main47index46html46erb'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:306:in `with_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:30:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/programming_projects/microcosm/app/views/main/_login.html.erb:5: syntax error, unexpected tASSOC
+....text_field :userName, class=>"textfield" ).to_s); @output_b...
+                              ^
+C:/programming_projects/microcosm/app/views/main/_login.html.erb:7: syntax error, unexpected tASSOC
+...d_field :userPassword, class=>"textfield"  ).to_s); @output_...
+                              ^) on line #5 of app/views/main/_login.html.erb:
+2: <% form_for :user, :url=>{ :action =>"login", :controller =>"main"}  do |f| %>
+3: 	<%= f.error_messages %>
+4: 	<%= f.label :userName, 'User Name ', :class => "login_label text_shadow" %><br/>
+5: 	<%= f.text_field :userName, class=>"textfield" %><br/>
+6: 	<%= f.label :userPassword, 'Password: ', :class => "login_label text_shadow" %><br/>
+7: 	<%= f.password_field :userPassword, class=>"textfield"  %><br/>
+8: 	
+
+    app/views/main/_login.html.erb:20:in `compile!'
+    app/views/main/index.html.erb:9
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (90.0ms)
+Rendered rescues/_request_and_response (12.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:43:34) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (5.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:45:26) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (4.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:47:45) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:48:02) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:49:32) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (5.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:50:58) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:52:01) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (1.0ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:53:42) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (5.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:53:54) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:54:04) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:54:09) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:54:18) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (4.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 21ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:54:28) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (4.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:55:11) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:55:35) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:57:19) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (4.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:58:31) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (5.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:58:52) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 07:58:55) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:00:42) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:00:44) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:01:08) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (5.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:01:15) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:03:16) [GET]
+Rendering template within layouts/main
+Rendering main/index
+ERROR: compiling _run_erb_app47views47main47_login46html46erb_locals_login_object RAISED compile error
+C:/programming_projects/microcosm/app/views/main/_login.html.erb:2: syntax error, unexpected tASSOC, expecting kEND
+...ler =>"main"}, html=> :class=>"login_form"  do |f| ; @output...
+                              ^
+C:/programming_projects/microcosm/app/views/main/_login.html.erb:2: syntax error, unexpected kDO, expecting kEND
+...tml=> :class=>"login_form"  do |f| ; @output_buffer.concat "...
+                              ^
+C:/programming_projects/microcosm/app/views/main/_login.html.erb:18: syntax error, unexpected kENSURE, expecting $end
+Function body:           def _run_erb_app47views47main47_login46html46erb_locals_login_object(local_assigns)
+            old_output_buffer = output_buffer;login = local_assigns[:login];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!--  Partial that shows the log-in form -->\n"
+;  form_for :user, :url=>{ :action =>"login", :controller =>"main"}, html=> :class=>"login_form"  do |f| ; @output_buffer.concat "\n\t"
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( f.label :userName, 'User Name ', :class => "login_label text_shadow" ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( f.text_field :userName, :class=>"textfield" ).to_s); @output_buffer.concat "<br/>\n\t"
+; @output_buffer.concat(( f.label :userPassword, 'Password: ', :class => "login_label text_shadow" ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( f.password_field :userPassword, :class=>"textfield"  ).to_s); @output_buffer.concat "<br/>\n\t\n\t"
+
+; @output_buffer.concat(( f.submit "Log In", :class=>"login_submit" ).to_s); @output_buffer.concat "\n\t"
+; @output_buffer.concat(( link_to "New user", new_user_path, :class=>"link text_shadow" ).to_s); @output_buffer.concat "\n\t\t\t\t\t\n\t"
+
+;  if flash[:notice] ; @output_buffer.concat "\n\t\t<div class=\"error\">\n\t\t\t"
+
+; @output_buffer.concat(( flash[:notice] ).to_s); @output_buffer.concat "\n\t\t</div>\n\t"
+
+;  end ; @output_buffer.concat "\t\n"
+;  end ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/programming_projects/microcosm/app/views/main/_login.html.erb:18:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:20:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:19:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:44:in `render_partial'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/partials.rb:184:in `render_partial'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:267:in `render'
+C:/programming_projects/microcosm/app/views/main/index.html.erb:9:in `_run_erb_app47views47main47index46html46erb'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:306:in `with_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:30:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/programming_projects/microcosm/app/views/main/_login.html.erb:2: syntax error, unexpected tASSOC, expecting kEND
+...ler =>"main"}, html=> :class=>"login_form"  do |f| ; @output...
+                              ^
+C:/programming_projects/microcosm/app/views/main/_login.html.erb:2: syntax error, unexpected kDO, expecting kEND
+...tml=> :class=>"login_form"  do |f| ; @output_buffer.concat "...
+                              ^
+C:/programming_projects/microcosm/app/views/main/_login.html.erb:18: syntax error, unexpected kENSURE, expecting $end) on line #2 of app/views/main/_login.html.erb:
+1: <!--  Partial that shows the log-in form -->
+2: <% form_for :user, :url=>{ :action =>"login", :controller =>"main"}, html=> :class=>"login_form"  do |f| %>
+3: 	<%= f.error_messages %>
+4: 	<%= f.label :userName, 'User Name ', :class => "login_label text_shadow" %>
+5: 	<%= f.text_field :userName, :class=>"textfield" %><br/>
+
+    app/views/main/_login.html.erb:18:in `compile!'
+    app/views/main/index.html.erb:9
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:04:50) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (5.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:07:57) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (5.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:11:21) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (7.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:11:56) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (5.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:16:27) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:16:39) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:16:51) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:17:03) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (4.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:17:05) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 18ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:17:26) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:17:41) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (1.0ms)
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:17:56) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:18:25) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (4.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:18:34) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:18:44) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"fbrQ6iLB9Mcuj43R6GAXpEz3pbGfxJ6BdOELH39/zFI=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 18ms (DB: 1) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:18:44) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (1.0ms)
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:23:14) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (1.0ms)
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:23:32) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:23:33) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"xrPf6+a6vW3e04FdZMKtOv+JfBuG8ReJj03qpE/Gdlk=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:23:33) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:23:43) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:23:44) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"xxpFiNd0QVk0Fiiz8Jqvq/wpwiJ9BjpyALyCFD9ro4g=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:23:44) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (1.0ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:25:43) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:25:47) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"o1WjO7MxePm/MXj8NIM+vzQqsaYDuZmqSMO12AQMnnk=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:25:47) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:26:06) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:26:08) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"uki52FWnWcF71cqwq+ZFvVWyvzURQr8ef/+yCLHbGtQ=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:26:08) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (1.0ms)
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:26:32) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:26:34) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"Du7E7IY4tjHNgYARYgGq98bW23zMAcjj7s+5c9fmEdo=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:26:34) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:27:16) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (5.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 14ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:27:18) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"lkUck0uAfjHgHLnOXUmGWX5Ytz32nYqltLR00WmdgXk=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:27:18) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:28:52) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (5.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 13ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:28:53) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:28:56) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"tQyC7tFq90Dj4bqsHyIgGZXHwH0AzSePVCe2RsQQ/vU=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:28:56) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:29:20) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (6.0ms)
+Rendered topics/_topics (1.0ms)
+Completed in 25ms (View: 21, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:29:21) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"LDaDHUv2U5ZVUNE1I+Ac5lNj3R/91vxXqZQENb5XbBs=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:29:21) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 19ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:29:37) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:29:40) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"kaYjR18S/O/Wug4h2y4nfN0XqmZ0o8oSm7hx1Oy0d3w=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 19ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:29:40) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (4.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 21ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:30:05) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:30:07) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"brMX3GXU80rm7HR7zvITlRC2fYwxFTIHEYS8Xi27vO4=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 18ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:30:07) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (1.0ms)
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:30:09) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"pLsw+aqZ6/Bx+cyjH2Tek/0SohwMCnQ86Ynx7jaTpFU=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 18ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:30:10) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (4.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 23ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:30:24) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 18ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:30:27) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"Hbglt/cfMGhhXcfAFtMn1BMhCwKiqzopb+hc6FL55c8=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:30:27) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 9ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:30:30) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"s7AZFiKtLOuNP+iiNSS0s83pJOfmY6lPnkVBrFI5Uck=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:30:30) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (4.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:30:48) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (1.0ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:30:50) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"dHBjCKhzROr/ItC2izozkSG6cf+tq5OVHuSdQ2nBMoE=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:30:50) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:30:54) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"Eku/CeMrLozh5qkJggXix6MMzbedR2/QVtC9dEXPf4Q=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:30:54) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:31:12) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:31:14) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"mAN20/Ytl52BCysL1i9ue8A60oflrPkDuirqCQBLUCM=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:31:14) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:31:32) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-08-28 08:31:33) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"3eO9yOajRFtPpc8Oqz+IuLE7/3wGnxMm69E1ke0EU3M=", "user"=>{"userName"=>"", "userPassword"=>""}}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userName" = '' AND "users"."userPassword" = '') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 08:31:33) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 19:08:20) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (0.0ms)
+Completed in 71ms (View: 70, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-08-28 19:08:39) [GET]
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 27ms (View: 17, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2010-08-28 19:08:44) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 91ms (View: 84, DB: 0) | 200 OK [http://localhost/topics/new]
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-08-28 19:09:06) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"la7okqjYrcMgg+yAoMm0Az6S2uEYmOHo4SXJ252g2fY=", "topic"=>{"topicType"=>"general", "topicName"=>"new dishwasher"}}
+  [4;36;1mTopic Create (7.0ms)[0m   [0;1mINSERT INTO "topics" ("created_at", "topicType", "updated_at", "topicName") VALUES('2010-08-29 02:09:06', 'general', '2010-08-29 02:09:06', 'new dishwasher')[0m
+Redirected to http://localhost:3000/topics/1
+Completed in 91ms (DB: 7) | 302 Found [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-08-28 19:09:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/topics/1]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-08-28 19:09:10) [GET]
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2010-08-28 19:09:11) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 79ms (View: 73, DB: 0) | 200 OK [http://localhost/topics/new]
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-08-28 19:09:19) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"la7okqjYrcMgg+yAoMm0Az6S2uEYmOHo4SXJ252g2fY=", "topic"=>{"topicType"=>"class", "topicName"=>"math class"}}
+  [4;35;1mTopic Create (1.0ms)[0m   [0mINSERT INTO "topics" ("created_at", "topicType", "updated_at", "topicName") VALUES('2010-08-29 02:09:19', 'class', '2010-08-29 02:09:19', 'math class')[0m
+Redirected to http://localhost:3000/topics/2
+Completed in 76ms (DB: 1) | 302 Found [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-08-28 19:09:20) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 2) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/topics/2]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-08-28 19:09:22) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2010-08-28 19:09:23) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 26ms (View: 21, DB: 0) | 200 OK [http://localhost/topics/new]
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-08-28 19:09:32) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"la7okqjYrcMgg+yAoMm0Az6S2uEYmOHo4SXJ252g2fY=", "topic"=>{"topicType"=>"class", "topicName"=>"orgasm class"}}
+  [4;36;1mTopic Create (1.0ms)[0m   [0;1mINSERT INTO "topics" ("created_at", "topicType", "updated_at", "topicName") VALUES('2010-08-29 02:09:32', 'class', '2010-08-29 02:09:32', 'orgasm class')[0m
+Redirected to http://localhost:3000/topics/3
+Completed in 71ms (DB: 1) | 302 Found [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-08-28 19:09:33) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 3) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/topics/3]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-08-28 19:09:35) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2010-08-28 19:09:38) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/topics/new]
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-08-28 19:09:56) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"la7okqjYrcMgg+yAoMm0Az6S2uEYmOHo4SXJ252g2fY=", "topic"=>{"topicType"=>"class", "topicName"=>"English class"}}
+  [4;35;1mTopic Create (1.0ms)[0m   [0mINSERT INTO "topics" ("created_at", "topicType", "updated_at", "topicName") VALUES('2010-08-29 02:09:56', 'class', '2010-08-29 02:09:56', 'English class')[0m
+Redirected to http://localhost:3000/topics/4
+Completed in 111ms (DB: 1) | 302 Found [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-08-28 19:09:57) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 4) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 10ms (View: 3, DB: 0) | 200 OK [http://localhost/topics/4]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-08-28 19:09:59) [GET]
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 20ms (View: 13, DB: 0) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-08-28 19:10:26) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE ("topics"."id" = 4) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/topics/4]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 19:12:27) [GET]
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #3 of app/views/topics/_topics.html.erb:
+1: 
+2: 
+3: <% @topics.each do |topic| %>
+4:   
+5:   
+6:     <p><%=h topic.topicName %></p>
+
+    app/views/topics/_topics.html.erb:3
+    app/views/main/index.html.erb:16
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:18:43) [GET]
+  [4;35;1mTopic Load (37.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (21.0ms)
+Rendered topics/_topics (29.0ms)
+Completed in 193ms (View: 80, DB: 37) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:20:27) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (4.0ms)
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-08-28 20:20:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://localhost/topics/1]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:24:48) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (5.0ms)
+Completed in 52ms (View: 23, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:35:00) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (7.0ms)
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:36:07) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (4.0ms)
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:37:11) [GET]
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:37:26) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (4.0ms)
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:37:30) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (4.0ms)
+Completed in 22ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:38:07) [GET]
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:38:38) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (5.0ms)
+Completed in 29ms (View: 17, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:38:47) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (6.0ms)
+Completed in 35ms (View: 20, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:43:32) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:50:53) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:51:14) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 25ms (View: 15, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:51:16) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (4.0ms)
+Rendered topics/_topics (4.0ms)
+Completed in 23ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:51:32) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (4.0ms)
+Rendered topics/_topics (5.0ms)
+Completed in 32ms (View: 19, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:51:55) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (4.0ms)
+Rendered topics/_topics (5.0ms)
+Completed in 31ms (View: 19, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:54:08) [GET]
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 23ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:55:01) [GET]
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:56:06) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (4.0ms)
+Completed in 19ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:56:22) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (5.0ms)
+Completed in 24ms (View: 15, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:58:45) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:59:02) [GET]
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (4.0ms)
+Completed in 25ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:59:07) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 20:59:57) [GET]
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 21:06:06) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 21:06:27) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (4.0ms)
+Completed in 21ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 21:06:31) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (4.0ms)
+Completed in 22ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 21:06:42) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (4.0ms)
+Completed in 23ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 21:07:44) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 21:07:45) [GET]
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (5.0ms)
+Completed in 75ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 21:08:27) [GET]
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 21:08:52) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (4.0ms)
+Completed in 23ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 21:09:07) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (6.0ms)
+Completed in 33ms (View: 20, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 21:09:07) [GET]
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 20ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 21:09:47) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 63ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 21:09:48) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 15ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TopicsController#show (for 127.0.0.1 at 2010-08-28 21:09:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE ("topics"."id" = 1) [0m
+Rendering template within layouts/topics
+Rendering topics/show
+Completed in 20ms (View: 7, DB: 0) | 200 OK [http://localhost/topics/1]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-28 21:10:23) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/]
