@@ -155,6 +155,7 @@ body
 	#topic_list
 		{	padding: 5px;
 			background-color: #ddd;
+			font-size: 75%;
 		}
 	#topic_title
 		{	position: relative;

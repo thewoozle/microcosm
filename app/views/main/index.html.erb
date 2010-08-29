@@ -17,6 +17,8 @@
 					<div id="topic_list" class="silver_border">					
 						<% if session[:id] %>
 							<%= render :partial=>"topics/topics" %>
+						<% else %>
+							<p>Login to view topics</p>
 						<% end %>	
 					</div>	
 				</div>	
