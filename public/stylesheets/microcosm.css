@@ -1,10 +1,11 @@
 /*	Description: 	MICROCOSM main css page, optomized for CHROME v.6.0
 	Author: 		Michael mcGuire
 					mmcgu1966@gmail dot com
-	Updated:		08/10/2010
+	Updated:		08/28/2010
+	
+	PROJECT CURRENTLY UNDER DEVELOPEMENT AND NOT IN THE FINISHED FORM
 */    
-/*			BASIC COLOR SCHEME:	bright brushed metal and smoked glass on wood and corkboard background
-								with black page background
+/*			BASIC COLOR SCHEME:	brushed metal and corkboard with metallic striped page background
 				dark red		#8b0000;
 				electrum		#b88c5b;		184,140,91
 				lt. sky blue	#87CEFA;		135, 206, 250
@@ -173,7 +174,7 @@ body
 /*	TOPICS	
 */			
 #topic_container
-	{	position: relative;		border: solid white;
+	{	position: relative;		border: solid white; background-color: black;
 			top: 25px;
 			left: 25px;
 		width: 510px;		

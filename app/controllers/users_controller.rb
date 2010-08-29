@@ -42,19 +42,48 @@ class UsersController < ApplicationController
 
   # POST /users
   # POST /users.xml
-  def create
+  
+  
+ def create
     @user = User.new(params[:user])
+	if @user.save
+		validUser = User.find_by_userName_and_userPassword(@user.userName, @user.userPassword)
+		
+			if validUser 
+				#creates a session with username
+				session[:id]=validUser.id 
+				$userName = validUser.firstName + " " + validUser.lastName
+			    flash[:notice] = "User was successfully created" 
 
-    respond_to do |format|
+				redirect_to '/main'
+			end
+		end
+	
+ end
+  
+  
+  
+ def stuff 
+	respond_to do |format|
       if @user.save
-        format.html { redirect_to(@user, :notice => 'User was successfully created.') }
-        format.xml  { render :xml => @user, :status => :created, :location => @user }
+		
+        flash[:notice] = "User was successfully created" 
+        redirect_to :action=> 'index'
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
       end
     end
-  end
+end	
+	
+	
+  
+  
+  
+  
+  
+  
+  
 
   # PUT /users/1
   # PUT /users/1.xml

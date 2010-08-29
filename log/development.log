@@ -31991,3 +31991,1041 @@ Rendering main/index
 Rendered main/_loggedin (1.0ms)
 Rendered topics/_topics (4.0ms)
 Completed in 22ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-29 09:59:21) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-29 10:00:40) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 16ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#logout (for 127.0.0.1 at 2010-08-29 10:00:42) [POST]
+  Parameters: {"commit"=>"Log Out", "authenticity_token"=>"5SHF3LbyCF8YhHpI3Xan5U0ogP8S8n73xcV8q1BqOmw="}
+Redirected to http://localhost:3000/
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/main/logout]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-29 10:00:43) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Completed in 23ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-29 10:00:44) [GET]
+Rendering template within layouts/users
+Rendering users/new
+ERROR: compiling _run_erb_app47views47users47new46html46erb RAISED compile error
+C:/programming_projects/microcosm/app/views/users/new.html.erb:39: syntax error, unexpected tSYMBEG, expecting kDO or '{' or '('
+... link_to 'Back', redirect_to :action=> 'index' ).to_s); @out...
+                              ^
+Function body:           def _run_erb_app47views47users47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<h1>New user</h1>\n\n"
+
+;  form_for(@user) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :userName ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :userName ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :firstName ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :firstName ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :lastName ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :lastName ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :userId ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :userId ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :userType ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :userType ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :userPassword ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :userPassword ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :userEmail ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :userEmail ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n\n"
+
+; @output_buffer.concat(( link_to 'Back', redirect_to :action=> 'index' ).to_s); @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/programming_projects/microcosm/app/views/users/new.html.erb:42:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/programming_projects/microcosm/app/controllers/users_controller.rb:32:in `new'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/programming_projects/microcosm/app/views/users/new.html.erb:39: syntax error, unexpected tSYMBEG, expecting kDO or '{' or '('
+... link_to 'Back', redirect_to :action=> 'index' ).to_s); @out...
+                              ^) on line #39 of app/views/users/new.html.erb:
+36:   </p>
+37: <% end %>
+38: 
+39: <%= link_to 'Back', redirect_to :action=> 'index' %>
+
+    app/views/users/new.html.erb:42:in `compile!'
+    app/controllers/users_controller.rb:32:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (247.0ms)
+Rendered rescues/_request_and_response (14.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-29 10:01:07) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 135ms (View: 126, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:01:10) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 27ms (View: 17, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-29 10:01:14) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 24ms (View: 15, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:01:18) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-29 10:01:35) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 41ms (View: 34, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-29 10:01:38) [GET]
+  Parameters: {"id"=>"index"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=index):
+  app/controllers/users_controller.rb:19:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (76.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-29 10:02:46) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 88ms (View: 81, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:02:48) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>""}}
+
+ActionView::MissingTemplate (Missing template users/main/index.erb in view path app/views):
+  app/controllers/users_controller.rb:53
+  app/controllers/users_controller.rb:48:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:03:02) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"testing", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>"test"}}
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("userName", "lastName", "created_at", "updated_at", "userType", "userId", "firstName", "userPassword", "userEmail") VALUES('testing', '', '2010-08-29 17:03:02', '2010-08-29 17:03:02', '', '', '', 'test', '')[0m
+Redirected to http://localhost:3000/users/4
+Completed in 76ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-29 10:03:02) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 17ms (View: 9, DB: 1) | 200 OK [http://localhost/users/4]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:03:07) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 16ms (View: 9, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:03:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"testing", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>"test"}}
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("userName", "lastName", "created_at", "updated_at", "userType", "userId", "firstName", "userPassword", "userEmail") VALUES('testing', '', '2010-08-29 17:03:12', '2010-08-29 17:03:12', '', '', '', 'test', '')[0m
+Redirected to http://localhost:3000/users/5
+Completed in 81ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-29 10:03:13) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+Rendering template within layouts/users
+Rendering users/show
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/users/5]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-29 10:04:39) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 27ms (View: 21, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:04:58) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"Cthulhu", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>"f'thagon"}}
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("userName", "lastName", "created_at", "updated_at", "userType", "userId", "firstName", "userPassword", "userEmail") VALUES('Cthulhu', '', '2010-08-29 17:04:58', '2010-08-29 17:04:58', '', '', '', 'f''thagon', '')[0m
+Redirected to http://localhost:3000/users
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/users_controller.rb:50
+  app/controllers/users_controller.rb:48:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (101.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-08-29 10:05:41) [GET]
+
+SyntaxError (C:/programming_projects/microcosm/app/controllers/users_controller.rb:50: syntax error, unexpected ')', expecting '}'
+...er was successfully created.') }
+                              ^
+C:/programming_projects/microcosm/app/controllers/users_controller.rb:55: syntax error, unexpected kEND, expecting '}'
+C:/programming_projects/microcosm/app/controllers/users_controller.rb:86: syntax error, unexpected kEND, expecting '}'):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-29 10:06:13) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:06:16) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>""}}
+Rendering template within layouts/users
+Rendering users/new
+Completed in 31ms (View: 21, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:06:28) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"test", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>"test"}}
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("userName", "lastName", "created_at", "updated_at", "userType", "userId", "firstName", "userPassword", "userEmail") VALUES('test', '', '2010-08-29 17:06:28', '2010-08-29 17:06:28', '', '', '', 'test', '')[0m
+Redirected to http://localhost:3000/users?notice=User+was+successfully+created.
+Completed in 101ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:06:28) [GET]
+  Parameters: {"notice"=>"User was successfully created."}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 25ms (View: 17, DB: 1) | 200 OK [http://localhost/users?notice=User+was+successfully+created.]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-08-29 10:06:34) [DELETE]
+  Parameters: {"authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "id"=>"7"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mUser Destroy (5.0ms)[0m   [0mDELETE FROM "users" WHERE "id" = 7[0m
+Redirected to http://localhost:3000/users
+Completed in 126ms (DB: 6) | 302 Found [http://localhost/users/7]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:06:35) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 91ms (View: 84, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-08-29 10:06:37) [DELETE]
+  Parameters: {"authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "id"=>"6"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mUser Destroy (1.0ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 6[0m
+Redirected to http://localhost:3000/users
+Completed in 152ms (DB: 1) | 302 Found [http://localhost/users/6]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:06:38) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 19ms (View: 11, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-08-29 10:06:40) [DELETE]
+  Parameters: {"authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "id"=>"5"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mUser Destroy (1.0ms)[0m   [0mDELETE FROM "users" WHERE "id" = 5[0m
+Redirected to http://localhost:3000/users
+Completed in 106ms (DB: 1) | 302 Found [http://localhost/users/5]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:06:41) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-08-29 10:06:42) [DELETE]
+  Parameters: {"authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "id"=>"4"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mUser Destroy (1.0ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 4[0m
+Redirected to http://localhost:3000/users
+Completed in 107ms (DB: 1) | 302 Found [http://localhost/users/4]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:06:43) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-29 10:06:51) [GET]
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-29 10:08:40) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (2.0ms)
+Completed in 13ms (View: 6, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-29 10:08:44) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 24ms (View: 15, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:08:58) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"Cthulhu", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>"F'thag'on"}}
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("userName", "lastName", "created_at", "updated_at", "userType", "userId", "firstName", "userPassword", "userEmail") VALUES('Cthulhu', '', '2010-08-29 17:08:58', '2010-08-29 17:08:58', '', '', '', 'F''thag''on', '')[0m
+Redirected to http://localhost:3000/users
+
+NoMethodError (undefined method `call' for nil:NilClass):
+  app/controllers/users_controller.rb:48:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:09:20) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"Cthulhu", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>"F'thag'on"}}
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("userName", "lastName", "created_at", "updated_at", "userType", "userId", "firstName", "userPassword", "userEmail") VALUES('Cthulhu', '', '2010-08-29 17:09:20', '2010-08-29 17:09:20', '', '', '', 'F''thag''on', '')[0m
+
+NameError (undefined local variable or method `validUser' for #<UsersController:0x907d4f0>):
+  app/controllers/users_controller.rb:50
+  app/controllers/users_controller.rb:48:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-29 10:09:23) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 22ms (View: 14, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:09:31) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"test", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>"test"}}
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("userName", "lastName", "created_at", "updated_at", "userType", "userId", "firstName", "userPassword", "userEmail") VALUES('test', '', '2010-08-29 17:09:31', '2010-08-29 17:09:31', '', '', '', 'test', '')[0m
+
+NameError (undefined local variable or method `validUser' for #<UsersController:0x8ef0f50>):
+  app/controllers/users_controller.rb:50
+  app/controllers/users_controller.rb:48:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-29 10:09:56) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 22ms (View: 15, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-29 10:09:57) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:10:07) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"test", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>"password"}}
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("userName", "lastName", "created_at", "updated_at", "userType", "userId", "firstName", "userPassword", "userEmail") VALUES('test', '', '2010-08-29 17:10:07', '2010-08-29 17:10:07', '', '', '', 'password', '')[0m
+Redirected to http://localhost:3000/users
+
+NoMethodError (undefined method `call' for nil:NilClass):
+  app/controllers/users_controller.rb:48:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:10:51) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"test", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>"password"}}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.save):
+  app/controllers/users_controller.rb:48
+  app/controllers/users_controller.rb:47:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (118.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:11:23) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"test", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>"password"}}
+
+NoMethodError (undefined method `save' for "bob":String):
+  app/controllers/users_controller.rb:48
+  app/controllers/users_controller.rb:47:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-29 10:13:31) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:13:41) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"cthulhu", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>"password"}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userName" = 'cthulhu' AND "users"."userPassword" = 'password') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template users/create.erb in view path app/views):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-08-29 10:14:58) [GET]
+
+NoMethodError (undefined method `respond_to' for UsersController:Class):
+  app/controllers/users_controller.rb:68
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-29 10:15:41) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-29 10:16:25) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 20ms (View: 13, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:16:43) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"mike", "lastName"=>"mike", "userType"=>"", "userId"=>"", "firstName"=>"mike", "userEmail"=>"", "userPassword"=>"password"}}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = 'mike' AND "users"."userPassword" = 'password') LIMIT 1[0m
+
+ActionView::MissingTemplate (Missing template users/create.erb in view path app/views):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-29 10:17:55) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:18:02) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"mike", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>"pass"}}
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("userName", "lastName", "created_at", "updated_at", "userType", "userId", "firstName", "userPassword", "userEmail") VALUES('mike', '', '2010-08-29 17:18:02', '2010-08-29 17:18:02', '', '', '', 'pass', '')[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = 'mike' AND "users"."userPassword" = 'pass') LIMIT 1[0m
+
+NoMethodError (undefined method `console' for #<UsersController:0x90c6690>):
+  app/controllers/users_controller.rb:56:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:18:31) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"mike", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>"pass"}}
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("userName", "lastName", "created_at", "updated_at", "userType", "userId", "firstName", "userPassword", "userEmail") VALUES('mike', '', '2010-08-29 17:18:31', '2010-08-29 17:18:31', '', '', '', 'pass', '')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = 'mike' AND "users"."userPassword" = 'pass') LIMIT 1[0m
+Redirected to http://localhost:3000/users
+Completed in 95ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:18:33) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 29ms (View: 20, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-08-29 10:18:37) [DELETE]
+  Parameters: {"authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "id"=>"13"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 13) [0m
+  [4;36;1mUser Destroy (1.0ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 13[0m
+Redirected to http://localhost:3000/users
+Completed in 86ms (DB: 1) | 302 Found [http://localhost/users/13]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:18:37) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 97ms (View: 20, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-08-29 10:18:39) [DELETE]
+  Parameters: {"authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "id"=>"12"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 12) [0m
+  [4;35;1mUser Destroy (1.0ms)[0m   [0mDELETE FROM "users" WHERE "id" = 12[0m
+Redirected to http://localhost:3000/users
+Completed in 68ms (DB: 1) | 302 Found [http://localhost/users/12]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:18:40) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 25ms (View: 16, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-08-29 10:18:42) [DELETE]
+  Parameters: {"authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "id"=>"11"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mUser Destroy (2.0ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 11[0m
+Redirected to http://localhost:3000/users
+Completed in 84ms (DB: 2) | 302 Found [http://localhost/users/11]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:18:42) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-08-29 10:18:44) [DELETE]
+  Parameters: {"authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "id"=>"10"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mUser Destroy (1.0ms)[0m   [0mDELETE FROM "users" WHERE "id" = 10[0m
+Redirected to http://localhost:3000/users
+Completed in 78ms (DB: 1) | 302 Found [http://localhost/users/10]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:18:45) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-08-29 10:18:48) [DELETE]
+  Parameters: {"authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "id"=>"9"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mUser Destroy (1.0ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 9[0m
+Redirected to http://localhost:3000/users
+Completed in 99ms (DB: 2) | 302 Found [http://localhost/users/9]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:18:48) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-08-29 10:18:50) [DELETE]
+  Parameters: {"authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "id"=>"8"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mUser Destroy (1.0ms)[0m   [0mDELETE FROM "users" WHERE "id" = 8[0m
+Redirected to http://localhost:3000/users
+Completed in 97ms (DB: 2) | 302 Found [http://localhost/users/8]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:18:51) [GET]
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 14ms (View: 7, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:20:23) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:20:34) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"mike", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>"pass"}}
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("userName", "lastName", "created_at", "updated_at", "userType", "userId", "firstName", "userPassword", "userEmail") VALUES('mike', '', '2010-08-29 17:20:34', '2010-08-29 17:20:34', '', '', '', 'pass', '')[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = 'mike' AND "users"."userPassword" = 'pass') LIMIT 1[0m
+Redirected to http://localhost:3000/users/main%2Findex
+Completed in 68ms (DB: 2) | 302 Found [http://localhost/users]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-29 10:20:34) [GET]
+  Parameters: {"id"=>"main/index"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=main/index):
+  app/controllers/users_controller.rb:19:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-08-29 10:21:48) [GET]
+  Parameters: {"id"=>"main/index"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find User with ID=main/index):
+  app/controllers/users_controller.rb:19:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:21:51) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"mike", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>"pass"}}
+  [4;36;1mUser Create (2.0ms)[0m   [0;1mINSERT INTO "users" ("userName", "lastName", "created_at", "updated_at", "userType", "userId", "firstName", "userPassword", "userEmail") VALUES('mike', '', '2010-08-29 17:21:51', '2010-08-29 17:21:51', '', '', '', 'pass', '')[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = 'mike' AND "users"."userPassword" = 'pass') LIMIT 1[0m
+Redirected to http://localhost:3000/main/index
+Completed in 83ms (DB: 2) | 302 Found [http://localhost/users]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-08-29 10:21:51) [GET]
+  Parameters: {"id"=>"index"}
+
+ActionController::UnknownAction (No action responded to show. Actions: console, index, login, logout, and main):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:22:12) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "user"=>{"userName"=>"mike", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"", "userEmail"=>"", "userPassword"=>"pass"}}
+  [4;36;1mUser Create (1.0ms)[0m   [0;1mINSERT INTO "users" ("userName", "lastName", "created_at", "updated_at", "userType", "userId", "firstName", "userPassword", "userEmail") VALUES('mike', '', '2010-08-29 17:22:12', '2010-08-29 17:22:12', '', '', '', 'pass', '')[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = 'mike' AND "users"."userPassword" = 'pass') LIMIT 1[0m
+Redirected to http://localhost:3000/main
+Completed in 83ms (DB: 2) | 302 Found [http://localhost/users]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-29 10:22:13) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (0.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 16ms (View: 9, DB: 1) | 200 OK [http://localhost/main]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:22:28) [GET]
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 28ms (View: 19, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-08-29 10:22:31) [DELETE]
+  Parameters: {"authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "id"=>"16"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 16) [0m
+  [4;35;1mUser Destroy (1.0ms)[0m   [0mDELETE FROM "users" WHERE "id" = 16[0m
+Redirected to http://localhost:3000/users
+Completed in 83ms (DB: 1) | 302 Found [http://localhost/users/16]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:22:32) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 27ms (View: 16, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-08-29 10:22:33) [DELETE]
+  Parameters: {"authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "id"=>"15"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 15) [0m
+  [4;36;1mUser Destroy (1.0ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 15[0m
+Redirected to http://localhost:3000/users
+Completed in 82ms (DB: 2) | 302 Found [http://localhost/users/15]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:22:34) [GET]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 20ms (View: 11, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing UsersController#destroy (for 127.0.0.1 at 2010-08-29 10:22:36) [DELETE]
+  Parameters: {"authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis=", "id"=>"14"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 14) [0m
+  [4;35;1mUser Destroy (1.0ms)[0m   [0mDELETE FROM "users" WHERE "id" = 14[0m
+Redirected to http://localhost:3000/users
+Completed in 84ms (DB: 2) | 302 Found [http://localhost/users/14]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-08-29 10:22:36) [GET]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+Rendering template within layouts/users
+Rendering users/index
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://localhost/users]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-29 10:22:41) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 15ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#logout (for 127.0.0.1 at 2010-08-29 10:22:43) [POST]
+  Parameters: {"commit"=>"Log Out", "authenticity_token"=>"mswp3W0wDxopW+z9awnOQ/VHebFSpY6gSUsRh6rEyis="}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/main/logout]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-29 10:22:43) [GET]
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Completed in 15ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-08-29 10:22:47) [GET]
+Rendering template within layouts/users
+Rendering users/new
+Completed in 21ms (View: 11, DB: 0) | 200 OK [http://localhost/users/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-08-29 10:23:10) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"ECewHBTne5GEgECR8CjBbUqhZ+NbNVRvc6XXKeuxWws=", "user"=>{"userName"=>"cthulhu", "lastName"=>"", "userType"=>"", "userId"=>"", "firstName"=>"cthulhu", "userEmail"=>"", "userPassword"=>"f'thag'n"}}
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("userName", "lastName", "created_at", "updated_at", "userType", "userId", "firstName", "userPassword", "userEmail") VALUES('cthulhu', '', '2010-08-29 17:23:10', '2010-08-29 17:23:10', '', '', 'cthulhu', 'f''thag''n', '')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userName" = 'cthulhu' AND "users"."userPassword" = 'f''thag''n') LIMIT 1[0m
+Redirected to http://localhost:3000/main
+Completed in 122ms (DB: 1) | 302 Found [http://localhost/users]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-29 10:23:11) [GET]
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+Completed in 21ms (View: 11, DB: 1) | 200 OK [http://localhost/main]
