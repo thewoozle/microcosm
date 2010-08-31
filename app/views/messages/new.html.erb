@@ -12,9 +12,8 @@
   
   <p>
     <%= f.label :messageBody, "Message:" %>
-	<% t = Time.now %>
 	
-	<%= f.text_field :messageTime, :value=> t %> <br/>
+	<%= f.text_field :messageTime, :value=> Time.now %> <br/>
 	
     <%= f.text_area :messageBody %>
   </p>

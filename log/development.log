@@ -36730,3 +36730,76 @@ Processing MessagesController#show (for 127.0.0.1 at 2010-08-30 19:45:19) [GET]
 Rendering template within layouts/messages
 Rendering messages/show
 Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/messages/4]
+
+
+Processing MessagesController#show (for 127.0.0.1 at 2010-08-30 20:24:18) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE ("messages"."id" = 4) [0m
+Rendering template within layouts/messages
+Rendering messages/show
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/messages/4]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-08-30 20:24:19) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering template within layouts/messages
+Rendering messages/index
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/messages]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-08-30 20:24:21) [GET]
+Rendering template within layouts/messages
+Rendering messages/new
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-08-30 20:24:35) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "message"=>{"messageTopic"=>"cowabunga", "messageBody"=>"cowabunga?", "messageTime"=>"Mon Aug 30 20:24:21 -0700 2010"}}
+  [4;36;1mMessage Create (1.0ms)[0m   [0;1mINSERT INTO "messages" ("messageTopic", "created_at", "messageBody", "updated_at", "messageCreator", "messageTime") VALUES(0, '2010-08-31 03:24:35', 'cowabunga?', '2010-08-31 03:24:35', NULL, '2010-08-31 03:24:21')[0m
+Redirected to http://localhost:3000/messages/5
+Completed in 109ms (DB: 1) | 302 Found [http://localhost/messages]
+
+
+Processing MessagesController#show (for 127.0.0.1 at 2010-08-30 20:24:36) [GET]
+  Parameters: {"id"=>"5"}
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE ("messages"."id" = 5) [0m
+Rendering template within layouts/messages
+Rendering messages/show
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/messages/5]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-08-30 20:24:39) [GET]
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering template within layouts/messages
+Rendering messages/index
+Completed in 25ms (View: 17, DB: 0) | 200 OK [http://localhost/messages]
+
+
+Processing MessagesController#destroy (for 127.0.0.1 at 2010-08-30 20:24:45) [DELETE]
+  Parameters: {"authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "id"=>"3"}
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE ("messages"."id" = 3) [0m
+  [4;36;1mMessage Destroy (1.0ms)[0m   [0;1mDELETE FROM "messages" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/messages
+Completed in 65ms (DB: 1) | 302 Found [http://localhost/messages/3]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-08-30 20:24:46) [GET]
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering template within layouts/messages
+Rendering messages/index
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/messages]
+
+
+Processing MessagesController#destroy (for 127.0.0.1 at 2010-08-30 20:24:48) [DELETE]
+  Parameters: {"authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "id"=>"2"}
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE ("messages"."id" = 2) [0m
+  [4;35;1mMessage Destroy (1.0ms)[0m   [0mDELETE FROM "messages" WHERE "id" = 2[0m
+Redirected to http://localhost:3000/messages
+Completed in 81ms (DB: 1) | 302 Found [http://localhost/messages/2]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-08-30 20:24:48) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering template within layouts/messages
+Rendering messages/index
+Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/messages]
