@@ -2,7 +2,7 @@ class MainController < ApplicationController
 	
 	def index
 		@title ="MICROCOSM"
-		@messages = message.all
+		@messages = Message.all
 		@topics = Topic.all
 
 		respond_to do |format|

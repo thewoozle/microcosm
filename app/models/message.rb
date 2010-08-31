@@ -1,6 +1,5 @@
 class Message < ActiveRecord::Base
-
-	validates_presence_of :messageTopic
+	belongs_to :topic
 	validates_presence_of :messageBody
 	
 

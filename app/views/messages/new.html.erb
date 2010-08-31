@@ -4,10 +4,10 @@
   <%= f.error_messages %>
  
 	<div>
-		<%= f.label :messageTopic, "Title:" %><br />
-		<%= f.text_field :messageTopic %>
-		<span ><%= $userName %></span>
-		</div
+		<%= f.label :topicName, "Title:" %><br />
+		<%= text_field :topic, :topicName %>
+		<%= f.text_field :messageCreator, :value=>$userName %>
+		
 	</div>
   
   <p>

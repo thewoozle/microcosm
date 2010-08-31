@@ -25,6 +25,7 @@ class MessagesController < ApplicationController
   # GET /messages/new.xml
   def new
     @message = Message.new
+	@topic = Topic.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -42,16 +43,16 @@ class MessagesController < ApplicationController
   # POST /messages.xml
   def create
     @message = Message.new(params[:message])
+    @topic = @message.topics.build(params[:topic])
 
-    respond_to do |format|
+    
       if @message.save
-        format.html { redirect_to(@message, :notice => 'Message was successfully created.') }
-        format.xml  { render :xml => @message, :status => :created, :location => @message }
+        redirect_to :action=>"main/index", :notice => 'Message was successfully created.' 
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @message.errors, :status => :unprocessable_entity }
       end
-    end
+    
   end
 
   

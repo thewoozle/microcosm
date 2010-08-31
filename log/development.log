@@ -36803,3 +36803,726 @@ Processing MessagesController#index (for 127.0.0.1 at 2010-08-30 20:24:48) [GET]
 Rendering template within layouts/messages
 Rendering messages/index
 Completed in 20ms (View: 12, DB: 1) | 200 OK [http://localhost/messages]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-08-30 20:33:48) [GET]
+Rendering template within layouts/messages
+Rendering messages/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-08-30 20:34:58) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering template within layouts/messages
+Rendering messages/index
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/messages]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-08-30 20:35:34) [GET]
+Rendering template within layouts/messages
+Rendering messages/new
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/messages/new]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-08-30 20:36:12) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 27ms (View: 20, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-08-30 20:36:43) [GET]
+Rendering template within layouts/messages
+Rendering messages/new
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-08-30 20:37:50) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"money"}, "message"=>{"messageBody"=>"ain't got no money", "messageTime"=>"Mon Aug 30 20:36:43 -0700 2010"}}
+Rendering template within layouts/messages
+Rendering messages/new
+Completed in 22ms (View: 11, DB: 0) | 200 OK [http://localhost/messages]
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-08-30 20:38:33) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"money"}, "message"=>{"messageBody"=>"ain't got no money", "messageTime"=>"Mon Aug 30 20:36:43 -0700 2010"}}
+Rendering template within layouts/messages
+Rendering messages/new
+Completed in 19ms (View: 9, DB: 0) | 200 OK [http://localhost/messages]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-08-30 20:39:53) [GET]
+Rendering template within layouts/messages
+Rendering messages/new
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-08-30 20:40:00) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"money"}, "message"=>{"messageBody"=>"time", "messageTime"=>"Mon Aug 30 20:39:53 -0700 2010"}}
+  [4;35;1mMessage Create (1.0ms)[0m   [0mINSERT INTO "messages" ("messageTopic", "created_at", "messageBody", "updated_at", "messageCreator", "messageTime") VALUES(NULL, '2010-08-31 03:40:00', 'time', '2010-08-31 03:40:00', NULL, '2010-08-31 03:39:53')[0m
+Redirected to http://localhost:3000/messages/6
+Completed in 80ms (DB: 1) | 302 Found [http://localhost/messages]
+
+
+Processing MessagesController#show (for 127.0.0.1 at 2010-08-30 20:40:00) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE ("messages"."id" = 6) [0m
+Rendering template within layouts/messages
+Rendering messages/show
+Completed in 12ms (View: 4, DB: 1) | 200 OK [http://localhost/messages/6]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-08-30 20:41:51) [GET]
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering template within layouts/messages
+Rendering messages/index
+Completed in 86ms (View: 79, DB: 0) | 200 OK [http://localhost/messages]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-08-30 20:41:52) [GET]
+Rendering template within layouts/messages
+Rendering messages/new
+
+ActionView::TemplateError (undefined local variable or method `value' for #<ActionView::Base:0xf1f6ae8>) on line #9 of app/views/messages/new.html.erb:
+6: 	<div>
+7: 		<%= f.label :topicName, "Title:" %><br />
+8: 		<%= text_field :topic, :topicName %>
+9: 		<%= f.text_field :messageCreator, value=>$userName %>
+10: 		
+11: 	</div>
+12:   
+
+    app/views/messages/new.html.erb:9
+    app/views/messages/new.html.erb:3
+    app/controllers/messages_controller.rb:29:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-08-30 20:42:03) [GET]
+Rendering template within layouts/messages
+Rendering messages/new
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-08-30 20:42:23) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"smorgasbord"}, "message"=>{"messageBody"=>"mmm... good", "messageCreator"=>"michael mcguire", "messageTime"=>"Mon Aug 30 20:42:03 -0700 2010"}}
+  [4;36;1mMessage Create (1.0ms)[0m   [0;1mINSERT INTO "messages" ("messageTopic", "created_at", "messageBody", "updated_at", "messageCreator", "messageTime") VALUES(NULL, '2010-08-31 03:42:23', 'mmm... good', '2010-08-31 03:42:23', 'michael mcguire', '2010-08-31 03:42:03')[0m
+Redirected to http://localhost:3000/messages/7
+Completed in 75ms (DB: 1) | 302 Found [http://localhost/messages]
+
+
+Processing MessagesController#show (for 127.0.0.1 at 2010-08-30 20:42:24) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE ("messages"."id" = 7) [0m
+Rendering template within layouts/messages
+Rendering messages/show
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/messages/7]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-08-30 20:42:26) [GET]
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering template within layouts/messages
+Rendering messages/index
+Completed in 23ms (View: 16, DB: 0) | 200 OK [http://localhost/messages]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-08-30 20:46:11) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering template within layouts/messages
+Rendering messages/index
+Completed in 43ms (View: 16, DB: 1) | 200 OK [http://localhost/messages]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-08-30 20:46:12) [GET]
+Rendering template within layouts/messages
+Rendering messages/new
+Completed in 13ms (View: 6, DB: 0) | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-08-30 20:55:20) [GET]
+Rendering template within layouts/messages
+Rendering messages/new
+Completed in 43ms (View: 8, DB: 0) | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-08-30 20:55:54) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"taxidermy class"}, "message"=>{"messageBody"=>"make your own badger", "messageCreator"=>"michael mcguire", "messageTime"=>"Mon Aug 30 20:55:20 -0700 2010"}}
+
+NoMethodError (undefined method `topics' for #<Message:0xefaaff8>):
+  app/controllers/messages_controller.rb:46:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-08-30 21:19:50) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"taxidermy class"}, "message"=>{"messageBody"=>"make your own badger", "messageCreator"=>"michael mcguire", "messageTime"=>"Mon Aug 30 20:55:20 -0700 2010"}}
+
+NoMethodError (undefined method `build' for nil:NilClass):
+  app/controllers/messages_controller.rb:46:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (90.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-08-30 21:22:11) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"taxidermy class"}, "message"=>{"messageBody"=>"make your own badger", "messageCreator"=>"michael mcguire", "messageTime"=>"Mon Aug 30 20:55:20 -0700 2010"}}
+
+NoMethodError (undefined method `topics' for #<Message:0xf13b258>):
+  app/controllers/messages_controller.rb:46:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-08-30 21:25:00) [GET]
+
+SyntaxError (C:/programming_projects/microcosm/app/controllers/messages_controller.rb:87: syntax error, unexpected kEND, expecting $end):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (26.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-08-30 21:26:15) [GET]
+
+SyntaxError (C:/programming_projects/microcosm/app/controllers/messages_controller.rb:86: syntax error, unexpected kEND, expecting $end):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (92.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-08-30 21:26:16) [GET]
+
+SyntaxError (C:/programming_projects/microcosm/app/controllers/messages_controller.rb:86: syntax error, unexpected kEND, expecting $end):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (26.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-08-30 21:27:03) [GET]
+
+SyntaxError (C:/programming_projects/microcosm/app/controllers/messages_controller.rb:86: syntax error, unexpected kEND, expecting $end):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-08-30 21:27:28) [GET]
+
+SyntaxError (C:/programming_projects/microcosm/app/controllers/messages_controller.rb:87: syntax error, unexpected kEND, expecting $end):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (91.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-08-30 21:28:30) [GET]
+
+SyntaxError (C:/programming_projects/microcosm/app/controllers/messages_controller.rb:87: syntax error, unexpected kEND, expecting $end):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (27.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-08-30 21:29:30) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering template within layouts/messages
+Rendering messages/index
+Completed in 25ms (View: 18, DB: 1) | 200 OK [http://localhost/messages]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-08-30 21:29:35) [GET]
+Rendering template within layouts/messages
+Rendering messages/new
+Completed in 19ms (View: 7, DB: 0) | 200 OK [http://localhost/messages/new]
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-08-30 21:29:57) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"spugnoie"}, "message"=>{"messageBody"=>"blah blach\r\n", "messageCreator"=>"michael mcguire", "messageTime"=>"Mon Aug 30 21:29:35 -0700 2010"}}
+
+NoMethodError (undefined method `topics' for #<Message:0xefa2dd8>):
+  app/controllers/messages_controller.rb:46:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-30 21:38:46) [GET]
+
+NameError (undefined local variable or method `message' for #<MainController:0xf239628>):
+  app/controllers/main_controller.rb:5:in `index'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-08-30 21:39:19) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+Completed in 21ms (View: 8, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2010-08-30 21:39:22) [GET]
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `net' for #<Class:0xf037f20>):
+  app/controllers/topics_controller.rb:30:in `new'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (96.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2010-08-30 21:40:34) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+
+ActionView::TemplateError (undefined method `messageBody' for #<Topic:0xf1a1a80>) on line #19 of app/views/topics/new.html.erb:
+16: 	
+17: 	<%= f.text_field :messageTime, :value=> Time.now %> <br/>
+18: 	
+19:     <%= f.text_area :messageBody %>
+20:   </p>
+21:   <p>
+22:     <%= f.submit 'Create' %>
+
+    app/views/topics/new.html.erb:19
+    app/views/topics/new.html.erb:4
+    app/controllers/topics_controller.rb:32:in `new'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (45.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2010-08-30 21:42:12) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 24ms (View: 12, DB: 0) | 200 OK [http://localhost/topics/new]
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-08-30 21:42:34) [POST]
+  Parameters: {"commit"=>"Create", "messageBody"=>{"messageBody"=>"mmm... naked"}, "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"Nude Art Class"}, "message"=>{"messageCreator"=>"michael mcguire", "messageTime"=>"Mon Aug 30 21:42:12 -0700 2010"}}
+
+NoMethodError (undefined method `messagess' for nil:NilClass):
+  app/controllers/topics_controller.rb:47:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (51.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-08-30 21:43:16) [POST]
+  Parameters: {"commit"=>"Create", "messageBody"=>{"messageBody"=>"mmm... naked"}, "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"Nude Art Class"}, "message"=>{"messageCreator"=>"michael mcguire", "messageTime"=>"Mon Aug 30 21:42:12 -0700 2010"}}
+
+NoMethodError (undefined method `messages' for nil:NilClass):
+  app/controllers/topics_controller.rb:49:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2010-08-30 21:46:16) [POST]
+  Parameters: {"commit"=>"Create", "messageBody"=>{"messageBody"=>"mmm... naked"}, "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"Nude Art Class"}, "message"=>{"messageCreator"=>"michael mcguire", "messageTime"=>"Mon Aug 30 21:42:12 -0700 2010"}}
+
+SyntaxError (C:/programming_projects/microcosm/app/controllers/topics_controller.rb:54: syntax error, unexpected tASSOC, expecting kEND
+        :action => "new" }        
+                  ^
+C:/programming_projects/microcosm/app/controllers/topics_controller.rb:54: syntax error, unexpected '}', expecting kEND
+        :action => "new" }        
+                          ^
+C:/programming_projects/microcosm/app/controllers/topics_controller.rb:85: syntax error, unexpected $end, expecting kEND):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (26.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#create (for 127.0.0.1 at 2010-08-30 21:46:30) [POST]
+  Parameters: {"commit"=>"Create", "messageBody"=>{"messageBody"=>"mmm... naked"}, "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"Nude Art Class"}, "message"=>{"messageCreator"=>"michael mcguire", "messageTime"=>"Mon Aug 30 21:42:12 -0700 2010"}}
+
+SyntaxError (C:/programming_projects/microcosm/app/controllers/topics_controller.rb:54: syntax error, unexpected tASSOC, expecting kEND
+        :action => "new"    
+                  ^):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (89.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-08-30 21:47:00) [POST]
+  Parameters: {"commit"=>"Create", "messageBody"=>{"messageBody"=>"mmm... naked"}, "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"Nude Art Class"}, "message"=>{"messageCreator"=>"michael mcguire", "messageTime"=>"Mon Aug 30 21:42:12 -0700 2010"}}
+
+NoMethodError (undefined method `messages' for nil:NilClass):
+  app/controllers/topics_controller.rb:49:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (38.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-08-30 21:49:37) [POST]
+  Parameters: {"commit"=>"Create", "messageBody"=>{"messageBody"=>"mmm... naked"}, "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"Nude Art Class"}, "message"=>{"messageCreator"=>"michael mcguire", "messageTime"=>"Mon Aug 30 21:42:12 -0700 2010"}}
+
+NoMethodError (undefined method `message' for nil:NilClass):
+  app/controllers/topics_controller.rb:49:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-08-30 21:49:57) [POST]
+  Parameters: {"commit"=>"Create", "messageBody"=>{"messageBody"=>"mmm... naked"}, "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"Nude Art Class"}, "message"=>{"messageCreator"=>"michael mcguire", "messageTime"=>"Mon Aug 30 21:42:12 -0700 2010"}}
+Redirected to http://localhost:3000/topics/new
+Completed in 18ms (DB: 0) | 302 Found [http://localhost/topics]
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2010-08-30 21:49:59) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 18ms (View: 6, DB: 0) | 200 OK [http://localhost/topics/new]
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-08-30 21:50:13) [POST]
+  Parameters: {"commit"=>"Create", "messageBody"=>{"messageBody"=>"spanking 101"}, "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"Spanking"}, "message"=>{"messageCreator"=>"michael mcguire", "messageTime"=>"Mon Aug 30 21:49:59 -0700 2010"}}
+Redirected to http://localhost:3000/topics/new
+Completed in 18ms (DB: 0) | 302 Found [http://localhost/topics]
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2010-08-30 21:50:14) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 19ms (View: 6, DB: 0) | 200 OK [http://localhost/topics/new]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-08-30 21:50:18) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-08-30 21:50:32) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+Rendering template within layouts/messages
+Rendering messages/index
+Completed in 25ms (View: 17, DB: 1) | 200 OK [http://localhost/messages]
+
+
+Processing TopicsController#index (for 127.0.0.1 at 2010-08-30 21:55:31) [GET]
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/topics
+Rendering topics/index
+Completed in 23ms (View: 14, DB: 1) | 200 OK [http://localhost/topics]
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2010-08-30 21:55:34) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 18ms (View: 6, DB: 0) | 200 OK [http://localhost/topics/new]
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-08-30 21:55:52) [POST]
+  Parameters: {"commit"=>"Create", "messageBody"=>{"messageBody"=>"gotta learn how"}, "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"spanking clASS"}, "message"=>{"messageCreator"=>"michael mcguire", "messageTime"=>"Mon Aug 30 21:55:34 -0700 2010"}}
+
+NoMethodError (undefined method `build_message' for #<Topic:0xf22d0a0>):
+  app/controllers/topics_controller.rb:49:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-08-30 21:58:36) [POST]
+  Parameters: {"commit"=>"Create", "messageBody"=>{"messageBody"=>"gotta learn how"}, "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"spanking clASS"}, "message"=>{"messageCreator"=>"michael mcguire", "messageTime"=>"Mon Aug 30 21:55:34 -0700 2010"}}
+
+NoMethodError (undefined method `build_messages' for #<Topic:0xf0ecec8>):
+  app/controllers/topics_controller.rb:49:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-08-30 21:59:09) [POST]
+  Parameters: {"commit"=>"Create", "messageBody"=>{"messageBody"=>"gotta learn how"}, "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"spanking clASS"}, "message"=>{"messageCreator"=>"michael mcguire", "messageTime"=>"Mon Aug 30 21:55:34 -0700 2010"}}
+
+NoMethodError (undefined method `build_message' for #<Topic:0xefce230>):
+  app/controllers/topics_controller.rb:49:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (28.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-08-30 22:03:31) [POST]
+  Parameters: {"commit"=>"Create", "messageBody"=>{"messageBody"=>"gotta learn how"}, "authenticity_token"=>"4TDq7VTO5alt0o5nzZqjZpjUJoQWk5xqOlUyWeUpa6M=", "topic"=>{"topicName"=>"spanking clASS"}, "message"=>{"messageCreator"=>"michael mcguire", "messageTime"=>"Mon Aug 30 21:55:34 -0700 2010"}}
+
+NoMethodError (undefined method `build_message' for #<Topic:0xf1fe9c0>):
+  app/controllers/topics_controller.rb:49:in `create'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (30.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
