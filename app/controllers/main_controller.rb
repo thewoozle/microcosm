@@ -2,7 +2,7 @@ class MainController < ApplicationController
 	
 	def index
 		@title ="MICROCOSM"
-		
+		@messages = message.all
 		@topics = Topic.all
 
 		respond_to do |format|
@@ -50,6 +50,13 @@ class MainController < ApplicationController
 			redirect_to :action=> 'index'
 		
 	end
+	
+	
+	
+  
+  
+  
+  
   
   
 		# the Console function accepts a string and prints it on the console output

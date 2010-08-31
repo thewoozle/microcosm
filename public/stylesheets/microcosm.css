@@ -170,6 +170,15 @@ body
 			{	color: #fff;
 				text-shadow: #000 1px 1px 2px;
 			}
+	#new_message
+		{	position: relative;
+				top: 25px;
+			text-align: center;	
+		}
+	#new_message a
+		{	color: #87CEFA;
+			font-size: 120%
+		}
 			
 			
 /*	TOPICS	
@@ -194,5 +203,7 @@ body
 		width: 240px;		
 		height: 570px;
 	}
+	
+	
 
 	

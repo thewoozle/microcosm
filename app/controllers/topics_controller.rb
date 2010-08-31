@@ -9,6 +9,8 @@ class TopicsController < ApplicationController
       format.xml  { render :xml => @topics }
     end
   end
+  
+  
 
   # GET /topics/1
   # GET /topics/1.xml

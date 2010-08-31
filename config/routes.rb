@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :messages
+
   map.root :controller => "main"
   map.resources :main  
   map.resources :posts

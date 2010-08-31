@@ -7,7 +7,6 @@
 				<DIV ID="log_in">
 					<% if !session[:id] %>
 						<%= render :partial =>"login" %>
-						</p>
 					<% else %>	
 						<%= render :partial =>"loggedin" %>
 					<% end %>	
