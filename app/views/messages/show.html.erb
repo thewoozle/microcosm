@@ -1,0 +1,23 @@
+<p>
+  <b>Messagecreator:</b>
+  <%=h @message.messageCreator %>
+</p>
+
+<p>
+  <b>Messagetopic:</b>
+  <%=h @message.messageTopic %>
+</p>
+
+<p>
+  <b>Messagetime:</b>
+  <%=h @message.messageTime %>
+</p>
+
+<p>
+  <b>Messagebody:</b>
+  <%=h @message.messageBody %>
+</p>
+
+
+<%= link_to 'Edit', edit_message_path(@message) %> |
+<%= link_to 'Back', messages_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  messageCreator: MyString
+  messageTopic: 1
+  messageTime: 
+  messageBody: MyText
+
+two:
+  messageCreator: MyString
+  messageTopic: 1
+  messageTime: 
+  messageBody: MyText

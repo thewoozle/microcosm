@@ -1,0 +1,28 @@
+<h1>Editing message</h1>
+
+<% form_for(@message) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :messageCreator %><br />
+    <%= f.text_field :messageCreator %>
+  </p>
+  <p>
+    <%= f.label :messageTopic %><br />
+    <%= f.text_field :messageTopic %>
+  </p>
+  <p>
+    <%= f.label :messageTime %><br />
+    <%= f.datetime_select :messageTime %>
+  </p>
+  <p>
+    <%= f.label :messageBody %><br />
+    <%= f.text_area :messageBody %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @message %> |
+<%= link_to 'Back', messages_path %>
