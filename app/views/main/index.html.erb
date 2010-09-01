@@ -27,11 +27,17 @@
 		<div id="content">
 			<div id="topic_container">
 		
-				<div id="topic_1" class="topic silver_border faded_background">
-		
+				
+					<div id="topic_1" class="topic silver_border faded_background">
+				<% if $topic_1 %>
+					<%= render :partial=> "/topics/show_topic"  %>
+				<% end %>	
 				</div>	
 		
 				<div id="topic_2" class="topic silver_border faded_background">
+					<% if $topic_2 %>
+					<%= render :partial=> "/topics/show_topic"  %>
+				<% end %>	
 						
 				</div>
 			</div>	<!-- end of topic_container -->	

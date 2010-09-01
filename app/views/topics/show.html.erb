@@ -1,13 +1,10 @@
-<p>
-  <b>Topicname:</b>
-  <%=h @topic.topicName %>
-</p>
 
-<p>
-  <b>Topictype:</b>
-  <%=h @topic.topicType %>
-</p>
+<h2><%= @topic.topicName %></h2>
+
+<%= render :partial=>"/messages/new_message", :locals=>{:message=>Message.new}%>
+
+<%messageTopic = @topic.id%>
+<h2><%=messageTopic%></h2>
+<%= render :partial=>"/messages/show_message", :locals=>{:messages=>Message.find(:all, :conditions =>["messageTopic = ?", messageTopic])} %>
 
 
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
-<%= link_to 'Back', topics_path %>

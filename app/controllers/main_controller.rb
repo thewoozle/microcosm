@@ -4,7 +4,8 @@ class MainController < ApplicationController
 		@title ="MICROCOSM"
 		@messages = Message.all
 		@topics = Topic.all
-
+		
+		
 		respond_to do |format|
 		  format.html # index.html.erb
 		  format.xml  { render :xml => @topics }
@@ -34,9 +35,11 @@ class MainController < ApplicationController
 			@validUser = nil
 			flash[:notice] = "INVALID User/Password"
 			redirect_to :action=> 'index'
-		end
-			
+		end			
 	end
+	
+	
+	
 	
   
 	

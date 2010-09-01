@@ -67,6 +67,10 @@ a
 		{	background-color: #c0c0c0;	/* default for depricated browsers  */
 			background-color: rgba(192,192,192,0.8);
 		}
+.faded_black_background
+		{	background-color: #000;	/* default for depricated browsers  */
+			background-color: rgba(0,0,0,0.6);
+		}
 	
 	
 /*			GENERAL LAYOUT
@@ -184,7 +188,7 @@ body
 /*	TOPICS	
 */			
 #topic_container
-	{	position: relative;		border: solid white; background-color: black;
+	{	position: relative;		border: solid white; 
 			top: 25px;
 			left: 25px;
 		width: 510px;		

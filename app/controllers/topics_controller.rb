@@ -3,7 +3,7 @@ class TopicsController < ApplicationController
   # GET /topics.xml
   def index
     @topics = Topic.all
-
+	
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @topics }
@@ -21,6 +21,7 @@ class TopicsController < ApplicationController
       format.html # show.html.erb
       format.xml  { render :xml => @topic }
     end
+   
   end
 
   # GET /topics/new

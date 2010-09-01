@@ -43,11 +43,11 @@ class MessagesController < ApplicationController
   # POST /messages.xml
   def create
     @message = Message.new(params[:message])
-    @topic = @message.topics.build(params[:topic])
-
+	
+    
     
       if @message.save
-        redirect_to :action=>"main/index", :notice => 'Message was successfully created.' 
+        redirect_to :controller=>'main', :action=>'index'
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @message.errors, :status => :unprocessable_entity }
