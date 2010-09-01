@@ -1,0 +1,11 @@
+<p>
+  <b>Topicname:</b>
+  
+  <%#=  @topic.topicName %>
+  
+</p>
+
+<%= render :partial=>"/messages/show_message", :locals=>{:messages=>Message.find(:all, :conditions =>["messageTopic = ?", messageTopic])} %>
+
+
+

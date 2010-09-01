@@ -1,0 +1,13 @@
+<% messages.each do |message|  %>
+  
+  <%= message.messageCreator %><br/>
+
+  <%= message.messageTopic %><br/>
+
+  <b>Messagetime:</b>
+  <%= message.messageTime %><br/>
+
+  <b>Messagebody:</b>
+  <%= message.messageBody %>
+<hr/>
+<% end %>

@@ -1,0 +1,23 @@
+
+
+<% form_for(message) do |f| %>
+  <%= error_messages_for :topic %>
+  <%= error_messages_for :message %>
+ 
+	<%= f.hidden_field :messageCreator, :value=>$userName %>
+	<%= f.hidden_field :messageTopic, :value=> @topic.id %>
+		
+	</div>
+  
+  <p>
+    <%= f.label :messageBody, "Message:" %>
+	
+	<%= f.hidden_field :messageTime, :value=> Time.now %> <br/>
+	
+    <%= f.text_area :messageBody %>
+  </p>
+  <p>
+    <%= submit_tag 'Create' %>
+  </p>
+<% end %>
+
