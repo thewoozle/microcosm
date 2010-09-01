@@ -29,10 +29,7 @@ class TopicsController < ApplicationController
     @topic = Topic.new
 	@message = Message.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.xml  { render :xml => @topic }
-    end
+    
   end
 
   # GET /topics/1/edit
@@ -46,12 +43,15 @@ class TopicsController < ApplicationController
   # POST /topics.xml
   def create
     @topic = Topic.new(params[:topic])
-    @message = @topic.build_message(params[:message])
-
+    @message = @topic.messages.build(params[:message])
+	
     if @topic.save
-        redirect_to :action=>"main/index", :notice => 'Topic was successfully created.'
+		#after new topic and message saves, update message with topic id
+        @message.messageTopic = @topic.id
+		@message.update_attributes(params[:message])
+		redirect_to :controller => 'main', :action => 'index'		
     else
-        redirect_to :action => "new"    
+        render :action => "new"    
     end
   end
 

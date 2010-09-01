@@ -1,7 +1,8 @@
 <h1>New message</h1>
 
 <% form_for(@message) do |f| %>
-  <%= f.error_messages %>
+  <%= error_messages_for :topic %>
+  <%= error_messages_for :message %>
  
 	<div>
 		<%= f.label :topicName, "Title:" %><br />
@@ -18,7 +19,7 @@
     <%= f.text_area :messageBody %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= submit_tag 'Create' %>
   </p>
 <% end %>
 

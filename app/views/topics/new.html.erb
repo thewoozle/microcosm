@@ -3,19 +3,22 @@
 
 <% form_for(@topic) do |f| %>
   <%= f.error_messages %>
- 
+  <%= error_messages_for 'message' %> 
+	
 	<div>
 		<%= f.label :topicName, "Title:" %><br />
-		<%= f.text_field :topicName %>
+		<%= f.text_field :topicName  %>
+		
 		<%= text_field :message, :messageCreator, :value=>$userName %>		
 	</div>
   
   <p>
     <%= f.label :messageBody, "Message:" %>
+	<% time = Time.now %>
 	
-	<%= text_field :message,  :messageTime, :value=> Time.now %> <br/>
+	<%= text_field :message,  :messageTime, :value=> time %> <br/>
 	
-    <%= text_area :messageBody,  :messageBody %>
+    <%= text_area :message,  :messageBody %>
   </p>
   <p>
     <%= f.submit 'Create' %>

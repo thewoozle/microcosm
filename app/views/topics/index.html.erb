@@ -3,13 +3,13 @@
 <table>
   <tr>
     <th>Topicname</th>
-    <th>Topictype</th>
+    <th>Topic ID</th>
   </tr>
 
 <% @topics.each do |topic| %>
   <tr>
     <td><%=h topic.topicName %></td>
-    <td><%=h topic.topicType %></td>
+    <td><%=h topic.id %></td>
     <td><%= link_to 'Show', topic %></td>
     <td><%= link_to 'Edit', edit_topic_path(topic) %></td>
     <td><%= link_to 'Destroy', topic, :confirm => 'Are you sure?', :method => :delete %></td>
