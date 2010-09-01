@@ -3,7 +3,8 @@
 						
 	<% @topics.each do |topic| %>
 		 
-		<p><%= link_to topic.topicName, topic %></p>    
+		<%= link_to topic.topicName, "" %><br/>    
+		<% $topic_1 = topic.id %>
 	<% end %>
 	<div id="new_message">
 		<%= link_to 'New Topic', new_topic_path, :class=>"link text_shadow" %>

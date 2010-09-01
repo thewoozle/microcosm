@@ -1,10 +1,10 @@
-<p>
-  <b>Topicname:</b>
-  
-  <%#=  @topic.topicName %>
-  
-</p>
 
+  <b>Topic name:</b>
+  <% @topic = Topic.find(:first, :conditions =>["id = ?", $topic_1]) %>
+  <%=  @topic.topicName %>
+  
+
+<%messageTopic = @topic.id%>
 <%= render :partial=>"/messages/show_message", :locals=>{:messages=>Message.find(:all, :conditions =>["messageTopic = ?", messageTopic])} %>
 
 

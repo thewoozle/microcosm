@@ -4,7 +4,7 @@
 <%= render :partial=>"/messages/new_message", :locals=>{:message=>Message.new}%>
 
 <%messageTopic = @topic.id%>
-<h2><%=messageTopic%></h2>
+
 <%= render :partial=>"/messages/show_message", :locals=>{:messages=>Message.find(:all, :conditions =>["messageTopic = ?", messageTopic])} %>
 
 

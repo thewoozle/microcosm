@@ -51442,3 +51442,389 @@ Rendered messages/_new_message (4.0ms)
   [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
 Rendered messages/_show_message (0.0ms)
 Completed in 26ms (View: 16, DB: 1) | 200 OK [http://localhost/topics/1]
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-09-01 15:29:18) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+Rendering template within layouts/messages
+Rendering messages/index
+Completed in 84ms (View: 77, DB: 1) | 200 OK [http://localhost/messages]
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-09-01 15:29:20) [GET]
+Rendering template within layouts/messages
+Rendering messages/new
+Completed in 19ms (View: 7, DB: 0) | 200 OK [http://localhost/messages/new]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 15:37:44) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (0.0ms)
+Rendered topics/_topics (2.0ms)
+
+ActionView::TemplateError (undefined local variable or method `messageTopic' for #<ActionView::Base:0xf144138>) on line #8 of app/views/topics/_show_topic.html.erb:
+5:   
+6: </p>
+7: 
+8: <%= render :partial=>"/messages/show_message", :locals=>{:messages=>Message.find(:all, :conditions =>["messageTopic = ?", messageTopic])} %>
+
+    app/views/topics/_show_topic.html.erb:8
+    app/views/main/index.html.erb:33
+    app/controllers/main_controller.rb:9:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 15:38:35) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+
+ActionView::TemplateError (undefined method `topicName' for nil:NilClass) on line #4 of app/views/topics/_show_topic.html.erb:
+1: <p>
+2:   <b>Topicname:</b>
+3:   
+4:   <%=  @topic.topicName %>
+5:   
+6: </p>
+7: 
+
+    app/views/topics/_show_topic.html.erb:4
+    app/views/main/index.html.erb:33
+    app/controllers/main_controller.rb:9:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 15:39:28) [GET]
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+
+ActionView::TemplateError (undefined method `topicName' for nil:NilClass) on line #4 of app/views/topics/_show_topic.html.erb:
+1: <p>
+2:   <b>Topicname:</b>
+3:   
+4:   <%=  @topic.topicName %>
+5:   
+6: </p>
+7: <%messageTopic = @topic.id%>
+
+    app/views/topics/_show_topic.html.erb:4
+    app/views/main/index.html.erb:33
+    app/controllers/main_controller.rb:9:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 15:39:58) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+
+ActionView::TemplateError (undefined method `topicName' for nil:NilClass) on line #4 of app/views/topics/_show_topic.html.erb:
+1: <p>
+2:   <b>Topicname:</b>
+3:   
+4:   <%=  @topic.topicName %>
+5:   
+6: </p>
+7: <%messageTopic = @topic.id%>
+
+    app/views/topics/_show_topic.html.erb:4
+    app/views/main/index.html.erb:33
+    app/controllers/main_controller.rb:9:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (50.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 15:44:30) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = 4) [0m
+
+ActionView::TemplateError (undefined method `topicName' for nil:NilClass) on line #4 of app/views/topics/_show_topic.html.erb:
+1: 
+2:   <b>Topic name:</b>
+3:   <% @topics = Topic.find(:all, :conditions =>["id = ?", $topic_1]) %>
+4:   <%=  @topic.topicName %>
+5:   
+6: 
+7: <%messageTopic = @topic.id%>
+
+    app/views/topics/_show_topic.html.erb:4
+    app/views/main/index.html.erb:33
+    app/controllers/main_controller.rb:9:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (114.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 15:44:32) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = 4) [0m
+
+ActionView::TemplateError (undefined method `topicName' for nil:NilClass) on line #4 of app/views/topics/_show_topic.html.erb:
+1: 
+2:   <b>Topic name:</b>
+3:   <% @topics = Topic.find(:all, :conditions =>["id = ?", $topic_1]) %>
+4:   <%=  @topic.topicName %>
+5:   
+6: 
+7: <%messageTopic = @topic.id%>
+
+    app/views/topics/_show_topic.html.erb:4
+    app/views/main/index.html.erb:33
+    app/controllers/main_controller.rb:9:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (49.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 15:44:36) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = 4) [0m
+
+ActionView::TemplateError (undefined method `topicName' for nil:NilClass) on line #4 of app/views/topics/_show_topic.html.erb:
+1: 
+2:   <b>Topic name:</b>
+3:   <% @topics = Topic.find(:all, :conditions =>["id = ?", $topic_1]) %>
+4:   <%=  @topic.topicName %>
+5:   
+6: 
+7: <%messageTopic = @topic.id%>
+
+    app/views/topics/_show_topic.html.erb:4
+    app/views/main/index.html.erb:33
+    app/controllers/main_controller.rb:9:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (117.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 15:44:51) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = 4) [0m
+
+ActionView::TemplateError (undefined method `topicName' for #<Array:0xf0f7d28>) on line #4 of app/views/topics/_show_topic.html.erb:
+1: 
+2:   <b>Topic name:</b>
+3:   <% @topic = Topic.find(:all, :conditions =>["id = ?", $topic_1]) %>
+4:   <%=  @topic.topicName %>
+5:   
+6: 
+7: <%messageTopic = @topic.id%>
+
+    app/views/topics/_show_topic.html.erb:4
+    app/views/main/index.html.erb:33
+    app/controllers/main_controller.rb:9:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 15:45:20) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = 4) LIMIT 1[0m
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (9.0ms)
+Completed in 37ms (View: 21, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 15:45:32) [GET]
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = 4) LIMIT 1[0m
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (3.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 26ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 15:45:35) [GET]
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = 4) LIMIT 1[0m
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (7.0ms)
+Completed in 33ms (View: 17, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 15:46:23) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = 4) LIMIT 1[0m
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (5.0ms)
+Completed in 31ms (View: 18, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 15:46:26) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = 4) LIMIT 1[0m
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (7.0ms)
+Completed in 36ms (View: 18, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 15:46:27) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = 4) LIMIT 1[0m
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (3.0ms)
+Rendered topics/_show_topic (8.0ms)
+Completed in 35ms (View: 18, DB: 2) | 200 OK [http://localhost/]
