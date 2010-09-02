@@ -1,5 +1,5 @@
 <% @topic = Topic.find(:first, :conditions =>["id = ?", $topic_1]) %>
-<h2><%=  @topic.topicName %></h2>
+<h2 class="headline_font"><%=  @topic.topicName  %></h2>
 <%= render :partial=>"/messages/new_message", :locals=>{:message=>Message.new}%>
 <div class="message_area">
 	<hr/>

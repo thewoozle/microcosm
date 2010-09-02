@@ -1,10 +1,7 @@
 			
 	<% @topics.each do |topic| %>
 		 
-		<%= link_to_remote topic.topicName, 
-			:url=>"/topics/#{topic.id}/show_topic" ,
-			:method=>"get", 
-			:update=>"topic_1" %><br/>    
+		<%= link_to topic.topicName, "", :id=>topic.id %><br/>    
 		
 	<% end %>
 	<div id="new_topic_link">

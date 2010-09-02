@@ -52,6 +52,9 @@ a
 		margin-left: -10px;
 		color: #ffffff
 	}
+h2 
+	{	font-size: 120%;
+	}
 	
 /*	COMMON CLASSES
 */	
@@ -92,7 +95,7 @@ textarea
 	}
 #wrapper		
 	{	width: 940px;
-		height: 760px;
+		height: 90%;
 		position: fixed;
 			top: 10px;
 			left: 30px;		
@@ -113,7 +116,7 @@ textarea
 				top: 120px;
 				left: 60px;	
 			width: 750px;	
-			height: 630px;
+			height: 75%;
 			background-image: url('../images/bulletin_board.jpg');				
 		}	
 		
@@ -200,20 +203,20 @@ textarea
 			top: 25px;
 			left: 25px;
 		width: 510px;		
-		height: 580px;
+		height: 90%;	
 	}
 	#topic_1
 	{	position: relative;		
 		float: left;	
 		width: 240px;		
-		height: 570px;
+		height: 100%;
 		margin-right: 10px;
 	}
 	#topic_2
 	{	position: relative;		
 		float: left;
 		width: 240px;		
-		height: 570px;
+		height: 100%;
 		overflow:scroll;
 	}
 	
@@ -230,7 +233,7 @@ textarea
 	{	position: relative;
 			z-index: 999;
 		padding: 5px;
-		height: 425px;
+		height: 72%;
 		overflow-y:scroll;
 	}
 	.add_button
