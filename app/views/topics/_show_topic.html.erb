@@ -1,22 +1,26 @@
-<% if $topicId %>
-	<div class="topic_div">
-		<% @topic = Topic.find(:first, :conditions =>["id = ?", $topicId]) %>
-		<div class="topic_header">	
-			<h2 class="headline_font"><%=  @topic.topicName  %></h2>
-			<div class="close_topic_form" >
-				<% form_for :topic, :url=>{ :action =>"showTopics"}  do |f| %>		
-					<%= f.submit " close " %>
-				<% end %>
-			</div>	
+<div class="topic_div">
+	<% @topic = Topic.find(:first, :conditions =>["id = ?", @topicId]) %>
+	<div class="topic_header">	
+		<h2 class="headline_font"><%=  @topic.topicName  %></h2>
+		
+		<div class="close_topic_form" >				
+			<% form_for :topic, :url=>{ :action =>"closeTopic"}  do |f| %>		
+				<%= link_to " close ", 
+					:action=>"pickTopic", 
+					:transferTopic=>topic.id,
+					:class=>"topicDiv", 
+					:id=>topic.id %><br/>  
+				<% end %>				
 		</div>	
-		<%= render :partial=>"/messages/new_message", :locals=>{:message=>Message.new}%>
-		<div class="message_area">
-			<hr/>
-			<%messageTopic = @topic.id%>
-			<%= render :partial=>"/messages/show_message", 
-			:locals=>{:messages=>Message.find(:all, 
-			:conditions =>["messageTopic = ?", 
-			messageTopic])} %>
-		</div>	<!-- end of message area -->
-	</div> <!-- end of topic_div -->	
-<% end %>
+		
+	</div>	
+	<%= render :partial=>"/messages/new_message", :locals=>{:message=>Message.new}%>
+	<div class="message_area">
+		<hr/>
+		<%messageTopic = @topic.id%>
+		<%= render :partial=>"/messages/show_message", 
+		:locals=>{:messages=>Message.find(:all, 
+		:conditions =>["messageTopic = ?", 
+		messageTopic])} %>
+	</div>	<!-- end of message area -->
+</div> <!-- end of topic_div -->	

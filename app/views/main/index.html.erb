@@ -5,7 +5,7 @@
 	<div id="wrapper" class="silver_border faded_background">
 		<div id="header">
 			<div id="control_panel">
-				<h1 class="headline_font"><%=@title%></h1>	
+				<h1 class="headline_font"><%=@title%></h1>					
 				<DIV ID="log_in">
 					<% if !session[:id] %>
 						<%= render :partial =>"login" %>
@@ -23,19 +23,29 @@
 						<% end %>	
 					</div>	
 				</div>	
+				<% if flash[:notice] %>
+					<div class="login_error error">
+						<%= flash[:notice] %>
+					</div>
+				<% end %>	
+				
 			</div>	<!--	end control_panel -->	
 		</div>		<!--	end header -->
 		
 		<div id="content">
 			<div id="topic_container">	
 				<div id="left_topic" class="topic silver_border faded_background">				
-					<% if $topicId && session[:id]  %>						
+					<% if $leftTopicId && session[:id]  %>		
+						<%@topicId = $leftTopicId %>
+						<%@side = 'left' %>
 						<%= render :partial=> "/topics/show_topic"  %>
 					<% end %>	
 				</div>	
 		
-				<div id="right_topic" class="topic silver_border faded_background">
-					<% if @right_topic && session[:id]  %>
+				<div id="right_topic" class="topic silver_border faded_background">			
+					<% if $rightTopicId && session[:id]  %>			
+						<%@topicId = $rightTopicId %>	
+						<%@side = 'right' %>			
 						<%= render :partial=> "/topics/show_topic"  %>
 					<% end %>							
 				</div>

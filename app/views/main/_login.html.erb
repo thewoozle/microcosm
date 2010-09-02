@@ -10,10 +10,6 @@
 		<%= f.submit "Log In", :class=>"login_submit" %>
 		<%= link_to "New user", new_user_path, :class=>"link text_shadow" %>
 	</div>				
-	<% if flash[:notice] %>
-		<div class="login_error error">
-			<%= flash[:notice] %>
-		</div>
-	<% end %>	
+	
 	<% $topicId = nil %>
 <% end %>
