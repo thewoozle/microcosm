@@ -1,4 +1,5 @@
 	<!--	main body of MICROCOSM page. Called by main.html.erb (layout)	-->
+		<div id="transfer_form">
 		
 		</div>	
 	<div id="wrapper" class="silver_border faded_background">
@@ -26,9 +27,9 @@
 		</div>		<!--	end header -->
 		
 		<div id="content">
-			<div id="topic_container">				
-				<div id="left_topic" class="topic silver_border faded_background">
-					<% if @left_topic && session[:id]  %>
+			<div id="topic_container">	
+				<div id="left_topic" class="topic silver_border faded_background">				
+					<% if $topicId && session[:id]  %>						
 						<%= render :partial=> "/topics/show_topic"  %>
 					<% end %>	
 				</div>	
@@ -43,12 +44,7 @@
 </div>
 	</div>	<!--	end wrapper -->	
 	
-	<div id="transfer_form">
-	<% form_for :transfer,  :url=>{ :action =>"transfer", :controller =>"main"}  do |f| %>
-		<%= f.text_field :@transfer_topic, :class=>"textfield" %>
-		<%= f.submit "transfer", :class=>"transfer_submit" %>
-	</div>		
-	<% end %>	
+	
 	
 	
 	<div id="footer" >

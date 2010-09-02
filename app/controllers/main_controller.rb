@@ -13,11 +13,18 @@ class MainController < ApplicationController
 	end	
 	
 	
+		def pickTopic
+		$topicId = params[:transferTopic]		
+		redirect_to :action=>'index'
+		end
+	
   
   def transfer
-	if @left_topic
-		render :action=> 'index'
-	end	
+	
+		@leftTopic = $transfer_topic
+	
+	puts @transfer_topic
+	redirect_to :action=> 'index'
   end
 	
 	

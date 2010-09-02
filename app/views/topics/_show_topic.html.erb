@@ -1,13 +1,13 @@
-<% if @topicId %>
-<% @topic = Topic.find(:first, :conditions =>["id = ?", 4]) %>
-<h2 class="headline_font"><%=  @topic.topicName  %></h2>
-<%= render :partial=>"/messages/new_message", :locals=>{:message=>Message.new}%>
-<div class="message_area">
-	<hr/>
-	<%messageTopic = @topic.id%>
-	<%= render :partial=>"/messages/show_message", 
-	:locals=>{:messages=>Message.find(:all, 
-	:conditions =>["messageTopic = ?", 
-	messageTopic])} %>
-</div>	<!-- end of message area -->
+<% if $topicId %>
+	<% @topic = Topic.find(:first, :conditions =>["id = ?", $topicId]) %>
+	<h2 class="headline_font"><%=  @topic.topicName  %></h2>
+	<%= render :partial=>"/messages/new_message", :locals=>{:message=>Message.new}%>
+	<div class="message_area">
+		<hr/>
+		<%messageTopic = @topic.id%>
+		<%= render :partial=>"/messages/show_message", 
+		:locals=>{:messages=>Message.find(:all, 
+		:conditions =>["messageTopic = ?", 
+		messageTopic])} %>
+	</div>	<!-- end of message area -->
 <% end %>

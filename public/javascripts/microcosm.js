@@ -18,20 +18,22 @@ function get_topic()  {
 	for (var i=0; i<topics.length; i++)  {
 		topics[i].onclick = function()  {
 			var displayTopic = this.getAttribute('id');	
-			alert("topic #"+displayTopic); 
-			
+			transfer_topic_value(displayTopic)
 		}
 	}	
 }
 
 
 
-function get_display_status()  {	
-	var left_topic = document.getElementById('left_topic'); 
-	var right_topic = document.getElementById('right_topic'); 
+function transfer_topic_value(displayTopic)  {	
+	var left_topic = document.getElementById('left_transfer'); 
+	var right_topic = document.getElementById('right_transfer'); 
+	var transfer_topic = document.getElementById('transfer_topic'); 
 	
+	transfer_topic.value = displayTopic
 	
-	var thisTopic = left_topic.getAttribute('id');
+	document.forms.transfer_form.submit();
+	
 	
 }
 

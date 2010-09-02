@@ -1,10 +1,15 @@
-			
+<% form_for :topic,  :url=>{ :action =>"showTopics"}  do |f| %>		
 	<% @topics.each do |topic| %>
 		
-		<%= link_to topic.topicName, "", :class=>"topicDiv", :id=>topic.id %><br/>    
+		<%= link_to topic.topicName, 
+			:action=>"pickTopic", 
+			:transferTopic=>topic.id,
+			:class=>"topicDiv", 
+			:id=>topic.id %><br/>    
 		
 	<% end %>
 	<div id="new_topic_link">
 		<%= link_to 'New Topic', new_topic_path, :class=>"link text_shadow" %>
 	</div>	
+<% end %>	
 	
