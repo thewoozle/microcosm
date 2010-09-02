@@ -197,13 +197,18 @@ textarea
 			
 			
 /*	TOPICS	
-*/			
+*/	
+.topic_div
+	{	position:relative;
+			z-index: 9;
+	}
 #topic_container
 	{	position: relative;		
 			top: 25px;
 			left: 25px;
 		width: 510px;		
 		height: 90%;	
+		overflow: hidden;
 	}
 	#left_topic
 	{	position: relative;		
@@ -220,24 +225,26 @@ textarea
 	}
 	
 	
-	#new_message
+	.new_message
 		{	margin-top: -15px;
 			text-align: center;	
-			position:relative;
-				z-index: 999;
-				left: -5px;
 		}
 		
 	.message_area
-	{	position: relative;
-			z-index: 999;
-		padding: 5px;
-		height: 72%;
+	{	padding: 5px;
+		height: 425px;
 		overflow-y:scroll;
+		
 	}
 	.add_button
 		{	position:relative;
 				top: -6px;
+		}
+	.close_topic_form
+		{	position: relative;
+				top: -20px;
+				z-index: 9;
+			float: right;	
 		}
 
 	
