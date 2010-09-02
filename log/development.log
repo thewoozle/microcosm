@@ -68050,3 +68050,202 @@ Rendered messages/_new_message (4.0ms)
 Rendered messages/_show_message (0.0ms)
 Rendered topics/_show_topic (10.0ms)
 Completed in 35ms (View: 21, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#logout (for 127.0.0.1 at 2010-09-02 09:30:17) [POST]
+  Parameters: {"commit"=>"Log Out", "authenticity_token"=>"26KrrXweU5l75zLlCav9BUm33C5hJ0w/Cqz596xO6FQ="}
+Redirected to http://localhost:3000/
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/main/logout]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 09:30:17) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (3.0ms)
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-09-02 09:30:38) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"C7HelGrvikNJp7nSYYlzdvC3Hdp5zFLhF+v+5EkJvg0=", "user"=>{"userName"=>"michael", "userPassword"=>"password"}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."userName" = 'michael' AND "users"."userPassword" = 'password') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 09:30:38) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (85.0ms)
+Completed in 124ms (View: 106, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 09:30:44) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"4", "transferTopic"=>"4"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/4?class=topicDiv&transferTopic=4]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 09:30:44) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (6.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (6.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (19.0ms)
+Completed in 63ms (View: 40, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 09:30:48) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"1", "transferTopic"=>"1"}
+Redirected to http://localhost:3000/
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/1?class=topicDiv&transferTopic=1]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 09:30:48) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (7.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (7.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (21.0ms)
+Completed in 74ms (View: 45, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TopicsController#new (for 127.0.0.1 at 2010-09-02 09:30:50) [GET]
+Rendering template within layouts/topics
+Rendering topics/new
+Completed in 124ms (View: 101, DB: 0) | 200 OK [http://localhost/topics/new]
+
+
+Processing TopicsController#create (for 127.0.0.1 at 2010-09-02 09:31:04) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"C7HelGrvikNJp7nSYYlzdvC3Hdp5zFLhF+v+5EkJvg0=", "topic"=>{"topicName"=>"logan"}, "message"=>{"messageBody"=>"logan's in kindergarten", "messageCreator"=>"michael mcguire", "messageTime"=>"Thu Sep 02 09:30:51 -0700 2010"}}
+  [4;35;1mTopic Create (11.0ms)[0m   [0mINSERT INTO "topics" ("created_at", "topicType", "updated_at", "topicName") VALUES('2010-09-02 16:31:04', NULL, '2010-09-02 16:31:04', 'logan')[0m
+  [4;36;1mMessage Create (0.0ms)[0m   [0;1mINSERT INTO "messages" ("messageTopic", "created_at", "messageBody", "updated_at", "messageCreator", "messageTime") VALUES(NULL, '2010-09-02 16:31:04', 'logan''s in kindergarten', '2010-09-02 16:31:04', 'michael mcguire', '2010-09-02 16:30:51')[0m
+  [4;35;1mMessage Update (1.0ms)[0m   [0mUPDATE "messages" SET "updated_at" = '2010-09-02 16:31:04', "messageTopic" = 37 WHERE "id" = 55[0m
+Redirected to http://localhost:3000/
+Completed in 210ms (DB: 12) | 302 Found [http://localhost/topics]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 09:31:04) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (7.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (6.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (20.0ms)
+Completed in 68ms (View: 44, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 09:31:08) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"37", "transferTopic"=>"37"}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/37?class=topicDiv&transferTopic=37]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 09:31:08) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '37') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 37) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (14.0ms)
+Completed in 50ms (View: 30, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-09-02 09:31:15) [POST]
+  Parameters: {"commit"=>" add message ", "authenticity_token"=>"C7HelGrvikNJp7nSYYlzdvC3Hdp5zFLhF+v+5EkJvg0=", "message"=>{"messageTopic"=>"37", "messageBody"=>"add a new post", "messageCreator"=>"michael mcguire", "messageTime"=>"Thu Sep 02 09:31:09 -0700 2010"}}
+  [4;36;1mMessage Create (1.0ms)[0m   [0;1mINSERT INTO "messages" ("messageTopic", "created_at", "messageBody", "updated_at", "messageCreator", "messageTime") VALUES(37, '2010-09-02 16:31:15', 'add a new post', '2010-09-02 16:31:15', 'michael mcguire', '2010-09-02 16:31:09')[0m
+Redirected to http://localhost:3000/
+Completed in 82ms (DB: 1) | 302 Found [http://localhost/messages]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 09:31:16) [GET]
+  [4;35;1mMessage Load (2.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (6.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '37') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 37) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (15.0ms)
+Completed in 57ms (View: 33, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 09:32:08) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '37') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 37) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (8.0ms)
+Completed in 33ms (View: 17, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#logout (for 127.0.0.1 at 2010-09-02 09:32:10) [POST]
+  Parameters: {"commit"=>"Log Out", "authenticity_token"=>"C7HelGrvikNJp7nSYYlzdvC3Hdp5zFLhF+v+5EkJvg0="}
+Redirected to http://localhost:3000/
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/main/logout]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 09:32:11) [GET]
+  [4;35;1mMessage Load (2.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (8.0ms)
+Completed in 45ms (View: 21, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-09-02 09:32:18) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"svCMDiUlqt+cz9KB0yev0CLfsXg+FsIzdUgsywMn43s=", "user"=>{"userName"=>"michael", "userPassword"=>"password"}}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = 'michael' AND "users"."userPassword" = 'password') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 09:32:19) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (2.0ms)
+Rendered topics/_topics (7.0ms)
+Completed in 46ms (View: 22, DB: 3) | 200 OK [http://localhost/]
