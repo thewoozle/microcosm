@@ -13,10 +13,11 @@ class MainController < ApplicationController
 	
 	
 	def closeTopic
-		if @side == 'left'
+		side=params[:side]
+		if $side == 'left'
 			puts @side
 			$leftTopicId = nil
-		elsif @side == 'right'
+		elsif $side == 'right'
 			$rightTopicId = nil	
 		end
 		redirect_to :action=>'index'

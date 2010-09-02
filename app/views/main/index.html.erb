@@ -34,18 +34,18 @@
 		
 		<div id="content">
 			<div id="topic_container">	
-				<div id="left_topic" class="topic silver_border faded_background">				
+				<div id="left_topic" >				
 					<% if $leftTopicId && session[:id]  %>		
 						<%@topicId = $leftTopicId %>
-						<%@side = 'left' %>
+						<%$side = 'left' %>
 						<%= render :partial=> "/topics/show_topic"  %>
 					<% end %>	
 				</div>	
 		
-				<div id="right_topic" class="topic silver_border faded_background">			
+				<div id="right_topic" >			
 					<% if $rightTopicId && session[:id]  %>			
 						<%@topicId = $rightTopicId %>	
-						<%@side = 'right' %>			
+						<%$side = 'right' %>			
 						<%= render :partial=> "/topics/show_topic"  %>
 					<% end %>							
 				</div>

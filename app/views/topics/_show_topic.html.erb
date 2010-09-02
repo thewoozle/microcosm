@@ -1,16 +1,12 @@
-<div class="topic_div">
+<div class="topic_div topic silver_border faded_background">
 	<% @topic = Topic.find(:first, :conditions =>["id = ?", @topicId]) %>
 	<div class="topic_header">	
 		<h2 class="headline_font"><%=  @topic.topicName  %></h2>
 		
-		<div class="close_topic_form" >				
-			<% form_for :topic, :url=>{ :action =>"closeTopic"}  do |f| %>		
-				<%= link_to " close ", 
-					:action=>"pickTopic", 
-					:transferTopic=>topic.id,
-					:class=>"topicDiv", 
-					:id=>topic.id %><br/>  
-				<% end %>				
+		<div class="close_topic_form" >	
+			<% form_tag  "/main/closeTopic" do %>
+				<%=submit_tag "close" %>			
+			<% end %>				
 		</div>	
 		
 	</div>	

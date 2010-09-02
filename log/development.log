@@ -72420,3 +72420,2986 @@ Rendered messages/_new_message (2.0ms)
 Rendered messages/_show_message (0.0ms)
 Rendered topics/_show_topic (7.0ms)
 Completed in 41ms (View: 26, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 11:58:20) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+
+ActionView::TemplateError (undefined local variable or method `topic' for #<ActionView::Base:0xf2382f0>) on line #10 of app/views/topics/_show_topic.html.erb:
+7: 			<% form_for :topic, :url=>{ :action =>"closeTopic"}  do |f| %>		
+8: 				<%= link_to " close ", 
+9: 					:action=>"pickTopic", 
+10: 					:transferTopic=>topic.id,
+11: 					:class=>"topicDiv", 
+12: 					:id=>topic.id %><br/>  
+13: 				<% end %>				
+
+    app/views/topics/_show_topic.html.erb:10
+    app/views/topics/_show_topic.html.erb:7
+    app/views/main/index.html.erb:41
+    app/controllers/main_controller.rb:8:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (107.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:02:56) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (0.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (13.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (7.0ms)
+Completed in 47ms (View: 32, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:03:10) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:04:02) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:04:04) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:04:11) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (10.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (8.0ms)
+Completed in 43ms (View: 27, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:04:15) [GET]
+  Parameters: {"side"=>"left", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:04:49) [GET]
+  Parameters: {"side"=>"left", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:04:52) [GET]
+  Parameters: {"side"=>"left", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:04:56) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (12.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (5.0ms)
+Completed in 46ms (View: 32, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:05:00) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:07:33) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:07:35) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:07:38) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+ERROR: compiling _run_erb_app47views47topics47_show_topic46html46erb_locals_object_show_topic RAISED compile error
+C:/programming_projects/microcosm/app/views/topics/_show_topic.html.erb:9: syntax error, unexpected ')'
+					:side=>@side,  ).to_s); @output_buffer.concat "<br/>  \n\t\t\t\t"
+					                ^
+Function body:           def _run_erb_app47views47topics47_show_topic46html46erb_locals_object_show_topic(local_assigns)
+            old_output_buffer = output_buffer;show_topic = local_assigns[:show_topic];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div class=\"topic_div\">\n\t"
+;  @topic = Topic.find(:first, :conditions =>["id = ?", @topicId]) ; @output_buffer.concat "\n\t<div class=\"topic_header\">\t\n\t\t<h2 class=\"headline_font\">"
+
+; @output_buffer.concat((  @topic.topicName  ).to_s); @output_buffer.concat "</h2>\n\t\t\n\t\t<div class=\"close_topic_form\" >\t\t\t\t\n\t\t\t"
+
+
+;  form_for :topic, :url=>{ :action =>"closeTopic"}  do |f| ; @output_buffer.concat "\t\t\n\t\t\t\t"
+; @output_buffer.concat(( link_to "close", 
+					:side=>@side,  ).to_s); @output_buffer.concat "<br/>  \n\t\t\t\t"
+;  end ; @output_buffer.concat "\t\t\t\t\n\t\t</div>\t\n\t\t\n\t</div>\t\n\t"
+
+
+
+; @output_buffer.concat(( render :partial=>"/messages/new_message", :locals=>{:message=>Message.new}).to_s); @output_buffer.concat "\n\t<div class=\"message_area\">\n\t\t<hr/>\n\t\t"
+
+
+; messageTopic = @topic.id; @output_buffer.concat "\n\t\t"
+; @output_buffer.concat(( render :partial=>"/messages/show_message", 
+		:locals=>{:messages=>Message.find(:all, 
+		:conditions =>["messageTopic = ?", 
+		messageTopic])} ).to_s); @output_buffer.concat "\n\t</div>\t<!-- end of message area -->\n</div> <!-- end of topic_div -->\t\n"
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/programming_projects/microcosm/app/views/topics/_show_topic.html.erb:27:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:20:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:19:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:44:in `render_partial'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/partials.rb:184:in `render_partial'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:267:in `render'
+C:/programming_projects/microcosm/app/views/main/index.html.erb:41:in `_run_erb_app47views47main47index46html46erb'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:306:in `with_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:30:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/programming_projects/microcosm/app/controllers/main_controller.rb:8:in `index'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/programming_projects/microcosm/app/views/topics/_show_topic.html.erb:9: syntax error, unexpected ')'
+					:side=>@side,  ).to_s); @output_buffer.concat "<br/>  \n\t\t\t\t"
+					                ^) on line #9 of app/views/topics/_show_topic.html.erb:
+6: 		<div class="close_topic_form" >				
+7: 			<% form_for :topic, :url=>{ :action =>"closeTopic"}  do |f| %>		
+8: 				<%= link_to "close", 
+9: 					:side=>@side,  %><br/>  
+10: 				<% end %>				
+11: 		</div>	
+12: 		
+
+    app/views/topics/_show_topic.html.erb:27:in `compile!'
+    app/views/main/index.html.erb:41
+    app/controllers/main_controller.rb:8:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (111.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:07:47) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (11.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 42ms (View: 30, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:07:50) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (10.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (7.0ms)
+Completed in 41ms (View: 26, DB: 3) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:07:52) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (11.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (8.0ms)
+Completed in 45ms (View: 28, DB: 4) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:07:53) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (10.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (7.0ms)
+Completed in 103ms (View: 28, DB: 2) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:07:54) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (10.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 43ms (View: 26, DB: 4) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:08:17) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (9.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 39ms (View: 25, DB: 2) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:08:19) [GET]
+  Parameters: {"side"=>"left"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (13.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (9.0ms)
+Completed in 58ms (View: 36, DB: 3) | 200 OK [http://localhost/?side=left]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:08:22) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (2.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (15.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (11.0ms)
+Completed in 122ms (View: 40, DB: 5) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:08:30) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (2.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (12.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (11.0ms)
+Completed in 58ms (View: 39, DB: 4) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:08:31) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (15.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (11.0ms)
+Completed in 58ms (View: 40, DB: 2) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:08:58) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (13.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (9.0ms)
+Completed in 53ms (View: 35, DB: 3) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:09:01) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (9.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (7.0ms)
+Completed in 40ms (View: 25, DB: 4) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:09:03) [GET]
+  Parameters: {"side"=>"left"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (10.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 41ms (View: 26, DB: 2) | 200 OK [http://localhost/?side=left]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:09:04) [GET]
+  Parameters: {"side"=>"left"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (10.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (7.0ms)
+Completed in 43ms (View: 26, DB: 3) | 200 OK [http://localhost/?side=left]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:09:06) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (11.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 42ms (View: 28, DB: 2) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:09:26) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (11.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 40ms (View: 26, DB: 2) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:09:29) [GET]
+  Parameters: {"side"=>"left"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (14.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (10.0ms)
+Completed in 59ms (View: 39, DB: 2) | 200 OK [http://localhost/?side=left]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:09:31) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (2.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (14.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (11.0ms)
+Completed in 62ms (View: 41, DB: 4) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:10:00) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (16.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (9.0ms)
+Completed in 62ms (View: 43, DB: 1) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:10:02) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (10.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 42ms (View: 27, DB: 2) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:10:30) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (6.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (6.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (19.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (11.0ms)
+Completed in 74ms (View: 51, DB: 4) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:10:34) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:13:57) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:14:00) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (13.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (8.0ms)
+Completed in 108ms (View: 93, DB: 3) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:14:03) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:14:29) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (12.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 46ms (View: 31, DB: 4) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:14:32) [GET]
+  Parameters: {"id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:15:23) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (2.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (10.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 39ms (View: 25, DB: 3) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:15:25) [GET]
+  Parameters: {"id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:16:21) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (2.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (12.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 47ms (View: 31, DB: 5) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:16:23) [GET]
+  Parameters: {"id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:16:40) [GET]
+  Parameters: {"side"=>"right"}
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (7.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (12.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (10.0ms)
+Completed in 62ms (View: 41, DB: 4) | 200 OK [http://localhost/?side=right]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 12:16:43) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"1", "transferTopic"=>"1"}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/1?class=topicDiv&transferTopic=1]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:16:43) [GET]
+  [4;35;1mMessage Load (2.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (6.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (7.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (21.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (15.0ms)
+Completed in 141ms (View: 57, DB: 6) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 12:16:45) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"36", "transferTopic"=>"36"}
+Redirected to http://localhost:3000/
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/36?class=topicDiv&transferTopic=36]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:16:45) [GET]
+  [4;35;1mMessage Load (2.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (7.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (7.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (22.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (16.0ms)
+Completed in 98ms (View: 63, DB: 6) | 200 OK [http://localhost/]
+
+
+Processing MainController#logout (for 127.0.0.1 at 2010-09-02 12:16:46) [POST]
+  Parameters: {"commit"=>"Log Out", "authenticity_token"=>"RcmK3+dMCUKbgaMy24xqsUKqR2eGKcb1IiQZmBdsQn0="}
+Redirected to http://localhost:3000/
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/main/logout]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:16:46) [GET]
+  [4;35;1mMessage Load (2.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_login (4.0ms)
+Completed in 39ms (View: 14, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#login (for 127.0.0.1 at 2010-09-02 12:16:55) [POST]
+  Parameters: {"commit"=>"Log In", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ=", "user"=>{"userName"=>"michael", "userPassword"=>"password"}}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."userName" = 'michael' AND "users"."userPassword" = 'password') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 19ms (DB: 1) | 302 Found [http://localhost/main/login]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:16:55) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (2.0ms)
+Rendered topics/_topics (7.0ms)
+Completed in 53ms (View: 24, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 12:16:58) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"4", "transferTopic"=>"4"}
+Redirected to http://localhost:3000/
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/4?class=topicDiv&transferTopic=4]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:16:58) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (2.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (6.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (18.0ms)
+Completed in 60ms (View: 37, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 12:17:00) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"38", "transferTopic"=>"38"}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/38?class=topicDiv&transferTopic=38]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:17:00) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (6.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (6.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (18.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (12.0ms)
+Completed in 73ms (View: 48, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 12:17:02) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"36", "transferTopic"=>"36"}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/36?class=topicDiv&transferTopic=36]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:17:02) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (6.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (19.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (13.0ms)
+Completed in 77ms (View: 52, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:18:16) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (12.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 44ms (View: 30, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:18:19) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:19:21) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:19:23) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (59.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (13.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 107ms (View: 92, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:19:26) [GET]
+  Parameters: {"id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:19:49) [GET]
+  Parameters: {"id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:19:54) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (6.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (6.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (25.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (13.0ms)
+Completed in 94ms (View: 65, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:20:06) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (10.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 41ms (View: 24, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:20:08) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:20:46) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (0.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (10.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 38ms (View: 23, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:20:49) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:21:27) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (12.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 46ms (View: 32, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:21:29) [GET]
+  Parameters: {"side"=>"right", "id"=>"pickTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:22:28) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (12.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 99ms (View: 30, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:22:30) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 12:22:42) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"1", "transferTopic"=>"1"}
+Redirected to http://localhost:3000/
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/1?class=topicDiv&transferTopic=1]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:22:42) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (6.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (19.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (13.0ms)
+Completed in 76ms (View: 51, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:23:22) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (12.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 45ms (View: 30, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:23:24) [GET]
+  Parameters: {"side"=>"right", "id"=>"close"}
+
+ActionController::UnknownAction (No action responded to show. Actions: close, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:28:15) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (13.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 44ms (View: 29, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:28:21) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:29:15) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (13.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 47ms (View: 30, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:29:19) [GET]
+  Parameters: {"side"=>"right", "id"=>"logout"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:30:11) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+
+ActionView::TemplateError (undefined local variable or method `action' for #<ActionView::Base:0xf1135c8>) on line #8 of app/views/topics/_show_topic.html.erb:
+5: 		
+6: 		<div class="close_topic_form" >				
+7: 			<%= link_to "close", 
+8: 				:url=>{action=> "closeTopic"},
+9: 				:side=> @side %><br/>  								
+10: 		</div>	
+11: 		
+
+    app/views/topics/_show_topic.html.erb:8
+    app/views/main/index.html.erb:41
+    app/controllers/main_controller.rb:8:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (49.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:35:36) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (12.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 43ms (View: 31, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:35:40) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:35:52) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:35:54) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:36:15) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (16.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (8.0ms)
+Completed in 56ms (View: 38, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:36:17) [GET]
+  Parameters: {"side"=>"right", "id"=>"main"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:36:47) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (63.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (74.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (8.0ms)
+Completed in 114ms (View: 98, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:36:51) [GET]
+  Parameters: {"id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:37:14) [GET]
+  [4;35;1mMessage Load (2.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (13.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;36;1mMessage Load (0.0ms)[0m   [0;1mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 47ms (View: 31, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:37:16) [GET]
+  Parameters: {"side"=>"right", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:38:27) [GET]
+  [4;35;1mMessage Load (2.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (6.0ms)
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+
+ActionView::TemplateError (undefined local variable or method `topic' for #<ActionView::Base:0xf331758>) on line #6 of app/views/topics/_show_topic.html.erb:
+3: 	<div class="topic_header">	
+4: 		<h2 class="headline_font"><%=  @topic.topicName  %></h2>
+5: 		
+6: <%= link_to topic.topicName, 
+7: 			:action=>"pickTopic", 
+8: 			:transferTopic=>topic.id,
+9: 			:class=>"topicDiv", 
+
+    app/views/topics/_show_topic.html.erb:6
+    app/views/main/index.html.erb:41
+    app/controllers/main_controller.rb:8:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (49.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:38:27) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+
+ActionView::TemplateError (undefined local variable or method `topic' for #<ActionView::Base:0xf05f958>) on line #6 of app/views/topics/_show_topic.html.erb:
+3: 	<div class="topic_header">	
+4: 		<h2 class="headline_font"><%=  @topic.topicName  %></h2>
+5: 		
+6: <%= link_to topic.topicName, 
+7: 			:action=>"pickTopic", 
+8: 			:transferTopic=>topic.id,
+9: 			:class=>"topicDiv", 
+
+    app/views/topics/_show_topic.html.erb:6
+    app/views/main/index.html.erb:41
+    app/controllers/main_controller.rb:8:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (116.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:38:43) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+
+ActionView::TemplateError (undefined local variable or method `topic' for #<ActionView::Base:0xf240b58>) on line #8 of app/views/topics/_show_topic.html.erb:
+5: 		
+6: <%= link_to "jj", 
+7: 			:action=>"pickTopic", 
+8: 			:transferTopic=>topic.id,
+9: 			:class=>"topicDiv", 
+10: 			:id=>topic.id %><br/>  
+11: 		</div>	
+
+    app/views/topics/_show_topic.html.erb:8
+    app/views/main/index.html.erb:41
+    app/controllers/main_controller.rb:8:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:38:55) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (13.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (73.0ms)
+Completed in 110ms (View: 95, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:38:59) [GET]
+  Parameters: {"side"=>"left", "id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:40:43) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (13.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 44ms (View: 30, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#closeTopic (for 127.0.0.1 at 2010-09-02 12:40:46) [POST]
+  Parameters: {"commit"=>" close ", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+Redirected to http://localhost:3000/
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/main/closeTopic]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:40:46) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (17.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (11.0ms)
+Completed in 62ms (View: 43, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:41:11) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (6.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (23.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (13.0ms)
+Completed in 84ms (View: 60, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:41:13) [POST]
+  Parameters: {"commit"=>" close ", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (6.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (6.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (23.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (14.0ms)
+Completed in 83ms (View: 56, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:41:19) [POST]
+  Parameters: {"commit"=>" close ", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (19.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (14.0ms)
+Completed in 78ms (View: 52, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:41:29) [POST]
+  Parameters: {"commit"=>" close ", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (20.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (14.0ms)
+Completed in 75ms (View: 51, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:41:54) [POST]
+  Parameters: {"commit"=>" close ", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (12.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (8.0ms)
+Completed in 49ms (View: 29, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:41:56) [POST]
+  Parameters: {"commit"=>" close ", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (0.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (10.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (7.0ms)
+Completed in 41ms (View: 26, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:41:59) [POST]
+  Parameters: {"commit"=>" close ", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (10.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (7.0ms)
+Completed in 40ms (View: 23, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:42:40) [POST]
+  Parameters: {"commit"=>" close ", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (13.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 48ms (View: 33, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:42:42) [POST]
+  Parameters: {"commit"=>" close ", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (15.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (10.0ms)
+Completed in 116ms (View: 38, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:42:44) [POST]
+  Parameters: {"commit"=>" close ", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (15.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (10.0ms)
+Completed in 58ms (View: 39, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:42:45) [POST]
+  Parameters: {"commit"=>" close ", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (14.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (11.0ms)
+Completed in 59ms (View: 38, DB: 6) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:43:14) [POST]
+  Parameters: {"commit"=>" close ", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (13.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (9.0ms)
+Completed in 49ms (View: 31, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:43:26) [POST]
+  Parameters: {"commit"=>" close ", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (13.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (9.0ms)
+Completed in 53ms (View: 35, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:43:28) [POST]
+  Parameters: {"commit"=>" close ", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (15.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (9.0ms)
+Completed in 58ms (View: 37, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:43:29) [POST]
+  Parameters: {"commit"=>" close ", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (13.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (10.0ms)
+Completed in 56ms (View: 35, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:45:43) [POST]
+  Parameters: {"commit"=>" close ", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (13.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 47ms (View: 31, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#closeTopic (for 127.0.0.1 at 2010-09-02 12:45:45) [POST]
+  Parameters: {"commit"=>"close", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/main/closeTopic]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:45:45) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (17.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (12.0ms)
+Completed in 67ms (View: 44, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing MainController#closeTopic (for 127.0.0.1 at 2010-09-02 12:45:48) [POST]
+  Parameters: {"commit"=>"close", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+Redirected to http://localhost:3000/
+Completed in 6ms (DB: 0) | 302 Found [http://localhost/main/closeTopic]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:45:48) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (2.0ms)
+Rendered topics/_topics (7.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (8.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (27.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (17.0ms)
+Completed in 103ms (View: 70, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:47:54) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (13.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 44ms (View: 30, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#show (for 127.0.0.1 at 2010-09-02 12:47:57) [GET]
+  Parameters: {"id"=>"closeTopic"}
+
+ActionController::UnknownAction (No action responded to show. Actions: closeTopic, console, index, login, logout, main, and pickTopic):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:48:18) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (20.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (10.0ms)
+Completed in 70ms (View: 50, DB: 5) | 200 OK [http://localhost/]
+
+
+Processing MainController#closeTopic (for 127.0.0.1 at 2010-09-02 12:48:19) [POST]
+  Parameters: {"commit"=>"close", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/main/closeTopic]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:48:19) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (6.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (7.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (23.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (17.0ms)
+Completed in 91ms (View: 63, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:50:12) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (13.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 52ms (View: 38, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#closeTopic (for 127.0.0.1 at 2010-09-02 12:50:16) [POST]
+  Parameters: {"commit"=>"close", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/main/closeTopic]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:50:16) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (18.0ms)
+Completed in 55ms (View: 35, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 12:50:19) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"36", "transferTopic"=>"36"}
+Redirected to http://localhost:3000/
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/36?class=topicDiv&transferTopic=36]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:50:19) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (2.0ms)
+Rendered topics/_topics (7.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (60.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (79.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (18.0ms)
+Completed in 155ms (View: 125, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 12:50:23) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"1", "transferTopic"=>"1"}
+Redirected to http://localhost:3000/
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/1?class=topicDiv&transferTopic=1]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:50:23) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (2.0ms)
+Rendered topics/_topics (7.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (8.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (28.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (20.0ms)
+Completed in 112ms (View: 76, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#closeTopic (for 127.0.0.1 at 2010-09-02 12:50:24) [POST]
+  Parameters: {"commit"=>"close", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+Redirected to http://localhost:3000/
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/main/closeTopic]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:50:25) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (2.0ms)
+Rendered topics/_topics (7.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (7.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (23.0ms)
+Completed in 73ms (View: 44, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 12:50:27) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"38", "transferTopic"=>"38"}
+Redirected to http://localhost:3000/
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/38?class=topicDiv&transferTopic=38]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:50:27) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (6.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (7.0ms)
+  [4;35;1mMessage Load (56.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (85.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (16.0ms)
+Completed in 155ms (View: 72, DB: 59) | 200 OK [http://localhost/]
+
+
+Processing MainController#closeTopic (for 127.0.0.1 at 2010-09-02 12:50:30) [POST]
+  Parameters: {"commit"=>"close", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+Redirected to http://localhost:3000/
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/main/closeTopic]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 12:50:30) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (2.0ms)
+Rendered topics/_topics (7.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (7.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (28.0ms)
+Completed in 85ms (View: 54, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 13:13:46) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"38", "transferTopic"=>"38"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/38?class=topicDiv&transferTopic=38]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:13:47) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (10.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (6.0ms)
+Completed in 40ms (View: 23, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#closeTopic (for 127.0.0.1 at 2010-09-02 13:14:05) [POST]
+  Parameters: {"commit"=>"close", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/main/closeTopic]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:14:07) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (65.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (73.0ms)
+Completed in 95ms (View: 80, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:15:16) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (13.0ms)
+Completed in 45ms (View: 31, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 13:15:19) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"36", "transferTopic"=>"36"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/36?class=topicDiv&transferTopic=36]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:15:19) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (7.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (23.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (14.0ms)
+Completed in 134ms (View: 58, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 13:15:38) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"36", "transferTopic"=>"36"}
+Redirected to http://localhost:3000/
+Completed in 6ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/36?class=topicDiv&transferTopic=36]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:15:38) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (6.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (6.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (23.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (16.0ms)
+Completed in 85ms (View: 59, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#closeTopic (for 127.0.0.1 at 2010-09-02 13:15:46) [POST]
+  Parameters: {"commit"=>"close", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+Redirected to http://localhost:3000/
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/main/closeTopic]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:15:46) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (2.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (6.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (15.0ms)
+Completed in 52ms (View: 28, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 13:15:58) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"38", "transferTopic"=>"38"}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/38?class=topicDiv&transferTopic=38]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:15:58) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (2.0ms)
+Rendered topics/_topics (66.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (6.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (23.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '38') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 38) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (15.0ms)
+Completed in 142ms (View: 119, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#closeTopic (for 127.0.0.1 at 2010-09-02 13:16:01) [POST]
+  Parameters: {"commit"=>"close", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+Redirected to http://localhost:3000/
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/main/closeTopic]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:16:01) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (6.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (6.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (24.0ms)
+Completed in 73ms (View: 47, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 13:16:05) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"1", "transferTopic"=>"1"}
+Redirected to http://localhost:3000/
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/1?class=topicDiv&transferTopic=1]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:16:05) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (20.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (16.0ms)
+Completed in 80ms (View: 57, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:17:18) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (11.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (7.0ms)
+Completed in 40ms (View: 25, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:17:32) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (15.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (10.0ms)
+Completed in 57ms (View: 38, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:17:45) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (15.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '1') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 1) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (11.0ms)
+Completed in 59ms (View: 39, DB: 3) | 200 OK [http://localhost/]
