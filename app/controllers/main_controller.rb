@@ -19,13 +19,7 @@ class MainController < ApplicationController
 		end
 	
   
-  def transfer
-	
-		@leftTopic = $transfer_topic
-	
-	puts @transfer_topic
-	redirect_to :action=> 'index'
-  end
+ 
 	
 	
 	def login 
