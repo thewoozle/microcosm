@@ -8,9 +8,7 @@ add_load_event(function()  {
 
 	get_topic();
 
-	prepare_front_screen();
-	get_screen_buttons();
-	highlightPage();
+	
 })	
 
 
@@ -18,10 +16,20 @@ add_load_event(function()  {
 /*	When a topic link is clicked-on, the get_topic function uses the link's ID as 
 	the topic.id to populate one of the divs that show topics
 */
-function get_topic()  {
-	alert("git_topic function loads");
-	
+function get_topic()  {	
+	var topics = getElementByClass ('topicDiv');	/* uses the topicDiv class to count the number of topics */
+	for (var i=0; i<topics.length; i++)  {
+		topics[i].onclick = function()  {
+			var displayTopic = this.getAttribute('id');	/** displayTopic is the topic.id that was clicked */		
+		}
+	}	
 }
+
+
+
+function get
+
+
 
 
 /*			cycles through the screen navigation buttons and when one is clicked, using the 

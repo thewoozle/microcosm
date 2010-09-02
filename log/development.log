@@ -56046,3 +56046,368 @@ Rendering main/index
 Rendered main/_loggedin (1.0ms)
 Rendered topics/_topics (2.0ms)
 Completed in 20ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:20:55) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+
+ActionView::TemplateError (can't convert Fixnum into String) on line #4 of app/views/topics/_topics.html.erb:
+1: 			
+2: 	<% @topics.each do |topic| %>
+3: 		
+4: 		<%= link_to topic.topicName, "", :id=>"topic_"+topic.id %><br/>    
+5: 		
+6: 	<% end %>
+7: 	<div id="new_topic_link">
+
+    app/views/topics/_topics.html.erb:4:in `+'
+    app/views/topics/_topics.html.erb:4
+    app/views/topics/_topics.html.erb:2:in `each'
+    app/views/topics/_topics.html.erb:2
+    app/views/main/index.html.erb:18
+    app/controllers/main_controller.rb:9:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (49.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:21:29) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (0.0ms)
+
+ActionView::TemplateError (can't convert Fixnum into String) on line #3 of app/views/topics/_topics.html.erb:
+1: 			
+2: 	<% @topics.each do |topic| %>
+3: 		<% topicDiv = "topic_"+topic.id %> 
+4: 		<%= link_to topic.topicName, "", :id=>topicDiv %><br/>    
+5: 		
+6: 	<% end %>
+
+    app/views/topics/_topics.html.erb:3:in `+'
+    app/views/topics/_topics.html.erb:3
+    app/views/topics/_topics.html.erb:2:in `each'
+    app/views/topics/_topics.html.erb:2
+    app/views/main/index.html.erb:18
+    app/controllers/main_controller.rb:9:in `index'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:25:10) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+Completed in 27ms (View: 13, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:29:27) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (1.0ms)
+Completed in 20ms (View: 7, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:31:04) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:31:27) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 23ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:40:40) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:40:43) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 24ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:40:45) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 21ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:40:46) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:42:34) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 21ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:42:37) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 32ms (View: 13, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:42:37) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 29ms (View: 11, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:42:39) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:43:00) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 22ms (View: 8, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:43:05) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 22ms (View: 8, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:43:06) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 30ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:43:07) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 29ms (View: 11, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:43:24) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 27ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:43:27) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 22ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:43:28) [GET]
+  [4;35;1mMessage Load (2.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 29ms (View: 11, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:43:29) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 29ms (View: 10, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:47:38) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (1.0ms)
+Completed in 20ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:47:41) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 76ms (View: 8, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:47:43) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 30ms (View: 11, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:47:48) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 27ms (View: 10, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:48:18) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 25ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:49:06) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (0.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 20ms (View: 7, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:50:32) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 20ms (View: 7, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:50:37) [GET]
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+Completed in 30ms (View: 12, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-01 21:50:40) [GET]
+  [4;35;1mMessage Load (2.0ms)[0m   [0mSELECT * FROM "messages" [0m
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (2.0ms)
+Completed in 29ms (View: 11, DB: 3) | 200 OK [http://localhost/]

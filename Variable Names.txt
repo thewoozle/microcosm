@@ -20,3 +20,10 @@ postTime		-	datetime
 loginName		-	userName to validate for log-in
 loginPassword	-	userPassword to validate for log-in
 
+topicDiv		-	the calss that the javascript control counts for the numer of topics
+
+javascript variables
+--------------------
+var topics		-	the list of topics, counting the topicDiv class
+var displaytopic-	the id of a topic that is clicked-on, using topic.id as the ID attribute of the link
+
