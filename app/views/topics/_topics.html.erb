@@ -1,12 +1,13 @@
-
-		
-						
+			
 	<% @topics.each do |topic| %>
 		 
-		<%= link_to topic.topicName, "" %><br/>    
-		<% $topic_1 = topic.id %>
+		<%= link_to_remote topic.topicName, 
+			:url=>"/topics/#{topic.id}/show_topic" ,
+			:method=>"get", 
+			:update=>"topic_1" %><br/>    
+		
 	<% end %>
-	<div id="new_message">
+	<div id="new_topic_link">
 		<%= link_to 'New Topic', new_topic_path, :class=>"link text_shadow" %>
 	</div>	
 	

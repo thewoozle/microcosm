@@ -3,7 +3,7 @@
 	<div id="wrapper" class="silver_border faded_background">
 		<div id="header">
 			<div id="control_panel">
-				<h1 class="headline_font"><%=@title%></h1>
+				<h1 class="headline_font"><%=@title%></h1>	
 				<DIV ID="log_in">
 					<% if !session[:id] %>
 						<%= render :partial =>"login" %>
@@ -25,20 +25,17 @@
 		</div>		<!--	end header -->
 		
 		<div id="content">
-			<div id="topic_container">
-		
-				
-					<div id="topic_1" class="topic silver_border faded_background">
-				<% if $topic_1 %>
-					<%= render :partial=> "/topics/show_topic"  %>
-				<% end %>	
+			<div id="topic_container">				
+				<div id="topic_1" class="topic silver_border faded_background">
+					<% if $topic_1 && session[:id]  %>
+						<%= render :partial=> "/topics/show_topic"  %>
+					<% end %>	
 				</div>	
 		
 				<div id="topic_2" class="topic silver_border faded_background">
 					<% if $topic_2 %>
-					<%= render :partial=> "/topics/show_topic"  %>
-				<% end %>	
-						
+						<%= render :partial=> "/topics/show_topic"  %>
+					<% end %>							
 				</div>
 			</div>	<!-- end of topic_container -->	
 		</div>	<!-- end content	-->	

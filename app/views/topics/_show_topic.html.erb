@@ -1,11 +1,11 @@
-
-  <b>Topic name:</b>
-  <% @topic = Topic.find(:first, :conditions =>["id = ?", $topic_1]) %>
-  <%=  @topic.topicName %>
-  
-
-<%messageTopic = @topic.id%>
-<%= render :partial=>"/messages/show_message", :locals=>{:messages=>Message.find(:all, :conditions =>["messageTopic = ?", messageTopic])} %>
-
-
-
+<% @topic = Topic.find(:first, :conditions =>["id = ?", $topic_1]) %>
+<h2><%=  @topic.topicName %></h2>
+<%= render :partial=>"/messages/new_message", :locals=>{:message=>Message.new}%>
+<div class="message_area">
+	<hr/>
+	<%messageTopic = @topic.id%>
+	<%= render :partial=>"/messages/show_message", 
+	:locals=>{:messages=>Message.find(:all, 
+	:conditions =>["messageTopic = ?", 
+	messageTopic])} %>
+</div>	<!-- end of message area -->
