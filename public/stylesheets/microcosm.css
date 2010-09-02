@@ -205,19 +205,18 @@ textarea
 		width: 510px;		
 		height: 90%;	
 	}
-	#topic_1
+	#left_topic
 	{	position: relative;		
 		float: left;	
 		width: 240px;		
 		height: 100%;
 		margin-right: 10px;
 	}
-	#topic_2
+	#right_topic
 	{	position: relative;		
 		float: left;
 		width: 240px;		
 		height: 100%;
-		overflow:scroll;
 	}
 	
 	

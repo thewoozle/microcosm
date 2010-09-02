@@ -13,6 +13,14 @@ class MainController < ApplicationController
 	end	
 	
 	
+  
+  def transfer
+	if @left_topic
+		render :action=> 'index'
+	end	
+  end
+	
+	
 	def login 
 		#	gets the userName and userPassword from the login Partial and validates them
 		#	then changes the main view from using the login Partial to the loggedin Partial
@@ -26,9 +34,7 @@ class MainController < ApplicationController
 			#creates a session with username
 			session[:id]=validUser.id 
 			$userName = validUser.firstName + " " + validUser.lastName
-			console validUser.id.to_s
-			
-			
+			console validUser.id.to_s			
 			redirect_to :action=> 'index'
 		else
 			reset_session

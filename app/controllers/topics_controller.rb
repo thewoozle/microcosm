@@ -10,6 +10,11 @@ class TopicsController < ApplicationController
     end
   end
   
+  def topic_messages
+	@topic = Topic.find (params[:topic_id])
+	render :partial=>'topics/show_topic', :locals=>{:messages=>@topic.messages}  
+  end
+  
   
 
   # GET /topics/1
@@ -28,9 +33,7 @@ class TopicsController < ApplicationController
   # GET /topics/new.xml
   def new
     @topic = Topic.new
-	@message = Message.new
-
-    
+	@message = Message.new    
   end
 
   # GET /topics/1/edit

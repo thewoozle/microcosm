@@ -5,10 +5,7 @@
 */
 			
 add_load_event(function()  {
-
-	get_topic();
-
-	
+	get_topic();	
 })	
 
 
@@ -20,14 +17,23 @@ function get_topic()  {
 	var topics = getElementByClass ('topicDiv');	/* uses the topicDiv class to count the number of topics */
 	for (var i=0; i<topics.length; i++)  {
 		topics[i].onclick = function()  {
-			var displayTopic = this.getAttribute('id');	/** displayTopic is the topic.id that was clicked */		
+			var displayTopic = this.getAttribute('id');	
+			alert("topic #"+displayTopic); 
+			
 		}
 	}	
 }
 
 
 
-function get
+function get_display_status()  {	
+	var left_topic = document.getElementById('left_topic'); 
+	var right_topic = document.getElementById('right_topic'); 
+	
+	
+	var thisTopic = left_topic.getAttribute('id');
+	
+}
 
 
 
@@ -57,12 +63,6 @@ function resize_screen (targetDiv)  {
 		
 	} 
 }
-
-function screen_slider ()  {
-
-}
-
-
 
 function highlightPage() {
 /*			highlights the li elements of the navigation bar that the page is currently on. */
