@@ -26,18 +26,15 @@ class MainController < ApplicationController
 	
 	def pickTopic
 		$topicId = params[:transferTopic]	
-		if !$leftTopicId 
+		if !$leftTopicId && $rightTopicId != $topicId
 			$leftTopicId = $topicId
-		elsif !$rightTopicId 	
+		elsif !$rightTopicId && $leftTopicId != $topicId	
 			$rightTopicId = $topicId
 		else 	
 			flash[:notice] = "please close a topic"
 		end	
 		redirect_to :action=>'index'
-	end
-	
-  
- 
+	end 
 	
 	
 	def login 
@@ -65,12 +62,7 @@ class MainController < ApplicationController
 		$rightTopicId = nil
 	end
 	
-	
-	
-	
-  
-	
-	
+		
 	def logout
 		
 			reset_session
@@ -79,21 +71,6 @@ class MainController < ApplicationController
 			@validUser = nil
 			redirect_to :action=> 'index'
 		
-	end
-	
-	
-	
-  
-  
-  
-  
-  
-  
-		# the Console function accepts a string and prints it on the console output
-		#	this is mainly for troubleshooting and testing
-	def console (consoleMessage)
-		puts "_____________________"
-		puts "  -- " + consoleMessage + "\n "		
 	end
 	
 	

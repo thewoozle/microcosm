@@ -75403,3 +75403,221 @@ Rendered messages/_new_message (4.0ms)
 Rendered messages/_show_message (0.0ms)
 Rendered topics/_show_topic (11.0ms)
 Completed in 59ms (View: 39, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#closeTopic (for 127.0.0.1 at 2010-09-02 13:22:41) [POST]
+  Parameters: {"commit"=>"close", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/main/closeTopic]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:22:41) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (10.0ms)
+Completed in 34ms (View: 19, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 13:22:44) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"4", "transferTopic"=>"4"}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/4?class=topicDiv&transferTopic=4]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:22:44) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (6.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (75.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (2.0ms)
+Rendered topics/_show_topic (15.0ms)
+Completed in 133ms (View: 109, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:23:27) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (3.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (10.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (5.0ms)
+Completed in 38ms (View: 24, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#closeTopic (for 127.0.0.1 at 2010-09-02 13:23:30) [POST]
+  Parameters: {"commit"=>"close", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/main/closeTopic]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:23:30) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (2.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (19.0ms)
+Completed in 60ms (View: 37, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 13:23:32) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"4", "transferTopic"=>"4"}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/4?class=topicDiv&transferTopic=4]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:23:32) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (14.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (9.0ms)
+Completed in 56ms (View: 37, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#closeTopic (for 127.0.0.1 at 2010-09-02 13:23:35) [POST]
+  Parameters: {"commit"=>"close", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/main/closeTopic]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:23:35) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (14.0ms)
+Completed in 45ms (View: 26, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:24:58) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (4.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (4.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (0.0ms)
+Rendered topics/_show_topic (10.0ms)
+Completed in 32ms (View: 18, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 13:25:03) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"36", "transferTopic"=>"36"}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/36?class=topicDiv&transferTopic=36]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:25:03) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (0.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (5.0ms)
+  [4;35;1mMessage Load (0.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (17.0ms)
+  [4;36;1mTopic Load (0.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '36') LIMIT 1[0m
+Rendered messages/_new_message (3.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 36) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (12.0ms)
+Completed in 67ms (View: 46, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing MainController#closeTopic (for 127.0.0.1 at 2010-09-02 13:25:05) [POST]
+  Parameters: {"commit"=>"close", "authenticity_token"=>"4BsoGqkJQ/YLtwqW8Q0rT+MtuRQEpTtSV0y51nKmOEQ="}
+Redirected to http://localhost:3000/
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/main/closeTopic]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:25:05) [GET]
+  [4;36;1mMessage Load (1.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (5.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (6.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (22.0ms)
+Completed in 70ms (View: 43, DB: 4) | 200 OK [http://localhost/]
+
+
+Processing MainController#pickTopic (for 127.0.0.1 at 2010-09-02 13:25:08) [GET]
+  Parameters: {"class"=>"topicDiv", "id"=>"4", "transferTopic"=>"4"}
+Redirected to http://localhost:3000/
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/main/pickTopic/4?class=topicDiv&transferTopic=4]
+
+
+Processing MainController#index (for 127.0.0.1 at 2010-09-02 13:25:08) [GET]
+  [4;36;1mMessage Load (2.0ms)[0m   [0;1mSELECT * FROM "messages" [0m
+  [4;35;1mTopic Load (1.0ms)[0m   [0mSELECT * FROM "topics" [0m
+Rendering template within layouts/main
+Rendering main/index
+Rendered main/_loggedin (1.0ms)
+Rendered topics/_topics (6.0ms)
+  [4;36;1mTopic Load (1.0ms)[0m   [0;1mSELECT * FROM "topics" WHERE (id = '4') LIMIT 1[0m
+Rendered messages/_new_message (6.0ms)
+  [4;35;1mMessage Load (1.0ms)[0m   [0mSELECT * FROM "messages" WHERE (messageTopic = 4) [0m
+Rendered messages/_show_message (1.0ms)
+Rendered topics/_show_topic (21.0ms)
+Completed in 65ms (View: 40, DB: 5) | 200 OK [http://localhost/]
