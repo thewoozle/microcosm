@@ -235,7 +235,13 @@ textarea
 		width: 240px;		
 		height: 100%;
 	}
-	
+	.message_header
+		{	font-size: 80%;
+		}	
+		.message_header span
+			{	float: right;
+				font-size: 70%;
+			}
 	
 	.new_message
 		{	margin-top: -15px;

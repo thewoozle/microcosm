@@ -1,8 +1,10 @@
 <% messages.reverse.each do |message|  %>
-<%= message.messageCreator %>
-<%= message.messageTime %><br/>
-<p class="message+body">
-	<%= message.messageBody %>
-</p>
-<hr/>
+	<div class="message_header">
+		<%= message.messageCreator %>
+		<span><%= message.messageTime %></span><br/>
+	</div	
+	<p class="message+body">
+		<%= message.messageBody %>
+	</p>
+	<hr/>
 <% end %>

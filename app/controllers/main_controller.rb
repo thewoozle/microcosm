@@ -50,7 +50,6 @@ class MainController < ApplicationController
 			#creates a session with username
 			session[:id]=validUser.id 
 			$userName = validUser.firstName + " " + validUser.lastName
-			console validUser.id.to_s	
 		else
 			reset_session
 			@validUser = nil
@@ -66,7 +65,6 @@ class MainController < ApplicationController
 	def logout
 		
 			reset_session
-			console ("logged out")
 			
 			@validUser = nil
 			redirect_to :action=> 'index'
